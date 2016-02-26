@@ -10,13 +10,21 @@
 */
 
 /*CHANGELOG:
+<<<<<<< HEAD
 *
 *
 *
 *
+=======
+* v0.1
+* add Galaxy S6 Under- and Overclock
+* 
+* v0.2
+* make clocker universal for EXYNOS 7420 (SM-G920, SM-G925, SM-G928 and SM-N920)
+>>>>>>> 2ea27d368... linux/clocker: make it universal
 */
 
-/* Samsung Galaxy S6 G92X EXYNOS 7420
+/*  EXYNOS 7420
 *   apollo cluster (little core)
 * 	{L0,  2000 * 1000},
 *	{L1,  1900 * 1000},
@@ -68,6 +76,7 @@
 
 #include <linux/cpufreq.h>
 
+<<<<<<< HEAD
 #ifdef CONFIG_G92X_CPU_UNDERCLOCK
 	#define G92X_CPU_MIN_FREQ_LITTLE L18; 		/* 200MHz */
 	#define G92X_CPU_MIN_FREQ_BIG L23; 		/* 200MHz */
@@ -82,6 +91,24 @@
 #else
  	#define G92X_CPU_MAX_FREQ_LITTLE L5;		/* 1500MHz */
 	#define G92X_CPU_MAX_FREQ_BIG L4;		/* 2100MHz */
+=======
+/* CPU*/
+
+#ifdef CONFIG_EXYNOS7420_CPU_UNDERCLOCK
+	#define EXYNOS7420_CPU_MIN_FREQ_LITTLE L18 		/* 200MHz */
+	#define EXYNOS7420_CPU_MIN_FREQ_BIG L23 		/* 200MHz */
+#else
+ 	#define EXYNOS7420_CPU_MIN_FREQ_LITTLE L16 		/* 400MHz */
+	#define EXYNOS7420_CPU_MIN_FREQ_BIG L17		/* 800MHz */
+#endif
+
+#ifdef CONFIG_EXYNOS7420_CPU_OVERCLOCK
+	#define EXYNOS7420_CPU_MAX_FREQ_LITTLE L4		/* 1600MHz */
+	#define EXYNOS7420_CPU_MAX_FREQ_BIG L0		/* 2500MHz */
+#else
+ 	#define EXYNOS7420_CPU_MAX_FREQ_LITTLE L5		/* 1500MHz */
+	#define EXYNOS7420_CPU_MAX_FREQ_BIG L4		/* 2100MHz */
+>>>>>>> 2ea27d368... linux/clocker: make it universal
 #endif
 
 
