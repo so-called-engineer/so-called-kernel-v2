@@ -10,24 +10,15 @@
 */
 
 /*CHANGELOG:
-<<<<<<< HEAD
-<<<<<<< HEAD
 *
 *
 *
 *
-=======
-=======
->>>>>>> 2ea27d368... linux/clocker: make it universal
 * v0.1
 * add Galaxy S6 Under- and Overclock
 * 
 * v0.2
 * make clocker universal for EXYNOS 7420 (SM-G920, SM-G925, SM-G928 and SM-N920)
-<<<<<<< HEAD
->>>>>>> 2ea27d368... linux/clocker: make it universal
-=======
->>>>>>> 2ea27d368... linux/clocker: make it universal
 */
 
 /*  EXYNOS 7420
@@ -82,8 +73,6 @@
 
 #include <linux/cpufreq.h>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 #ifdef CONFIG_G92X_CPU_UNDERCLOCK
 	#define G92X_CPU_MIN_FREQ_LITTLE L18; 		/* 200MHz */
 	#define G92X_CPU_MIN_FREQ_BIG L23; 		/* 200MHz */
@@ -98,7 +87,14 @@
 #else
  	#define G92X_CPU_MAX_FREQ_LITTLE L5;		/* 1500MHz */
 	#define G92X_CPU_MAX_FREQ_BIG L4;		/* 2100MHz */
-=======
+/* CPU*/
+
+#ifdef CONFIG_EXYNOS7420_CPU_UNDERCLOCK
+	#define EXYNOS7420_CPU_MIN_FREQ_LITTLE L18 		/* 200MHz */
+	#define EXYNOS7420_CPU_MIN_FREQ_BIG L23 		/* 200MHz */
+#else
+ 	#define EXYNOS7420_CPU_MIN_FREQ_LITTLE L16 		/* 400MHz */
+	#define EXYNOS7420_CPU_MIN_FREQ_BIG L17		/* 800MHz */
 /* CPU*/
 
 #ifdef CONFIG_EXYNOS7420_CPU_UNDERCLOCK
@@ -109,28 +105,30 @@
 	#define EXYNOS7420_CPU_MIN_FREQ_BIG L17		/* 800MHz */
 #endif
 
-=======
-/* CPU*/
-
-#ifdef CONFIG_EXYNOS7420_CPU_UNDERCLOCK
-	#define EXYNOS7420_CPU_MIN_FREQ_LITTLE L18 		/* 200MHz */
-	#define EXYNOS7420_CPU_MIN_FREQ_BIG L23 		/* 200MHz */
-#else
- 	#define EXYNOS7420_CPU_MIN_FREQ_LITTLE L16 		/* 400MHz */
-	#define EXYNOS7420_CPU_MIN_FREQ_BIG L17		/* 800MHz */
-#endif
-
->>>>>>> 2ea27d368... linux/clocker: make it universal
 #ifdef CONFIG_EXYNOS7420_CPU_OVERCLOCK
 	#define EXYNOS7420_CPU_MAX_FREQ_LITTLE L4		/* 1600MHz */
 	#define EXYNOS7420_CPU_MAX_FREQ_BIG L0		/* 2500MHz */
 #else
  	#define EXYNOS7420_CPU_MAX_FREQ_LITTLE L5		/* 1500MHz */
 	#define EXYNOS7420_CPU_MAX_FREQ_BIG L4		/* 2100MHz */
-<<<<<<< HEAD
->>>>>>> 2ea27d368... linux/clocker: make it universal
-=======
->>>>>>> 2ea27d368... linux/clocker: make it universal
+#endif
+
+/* CPU*/
+
+#ifdef CONFIG_EXYNOS7420_CPU_UNDERCLOCK
+	#define EXYNOS7420_CPU_MIN_FREQ_LITTLE L18 		/* 200MHz */
+	#define EXYNOS7420_CPU_MIN_FREQ_BIG L23 		/* 200MHz */
+#else
+ 	#define EXYNOS7420_CPU_MIN_FREQ_LITTLE L16 		/* 400MHz */
+	#define EXYNOS7420_CPU_MIN_FREQ_BIG L17		/* 800MHz */
+#endif
+
+#ifdef CONFIG_EXYNOS7420_CPU_OVERCLOCK
+	#define EXYNOS7420_CPU_MAX_FREQ_LITTLE L4		/* 1600MHz */
+	#define EXYNOS7420_CPU_MAX_FREQ_BIG L0		/* 2500MHz */
+#else
+ 	#define EXYNOS7420_CPU_MAX_FREQ_LITTLE L5		/* 1500MHz */
+	#define EXYNOS7420_CPU_MAX_FREQ_BIG L4		/* 2100MHz */
 #endif
 
 
