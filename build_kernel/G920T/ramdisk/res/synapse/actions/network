@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if [ ! -f /su/xbin/busybox ]; then
 	BB=/system/xbin/busybox;
 else
@@ -8,6 +9,22 @@ fi;
 case $1 in
 tcp_security)
   P=/res/synapse/sick/tcp_security
+=======
+# By UpInTheAir for SkyHigh kernels
+
+BB=/system/xbin/busybox;
+
+if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
+	$BB mount -o remount,rw /;
+fi;
+if [ "$($BB mount | grep system | grep -c ro)" -eq "1" ]; then
+	$BB mount -o remount,rw /system;
+fi;
+
+case $1 in
+tcp_security)
+  P=/res/synapse/Sickness/tcp_security
+>>>>>>> d307819e4... Add Synaspe Support
   if [ ! -z "$2" ]; then
   if [ "$2" == Disabled ]; then
     echo 0 > $P
@@ -58,9 +75,15 @@ tcp_security)
   fi
   ;;
 dns)
+<<<<<<< HEAD
   P=/res/synapse/sick/dns;
   IPTABLES=/system/bin/iptables;
   DNS_STATUS=$(cat /res/synapse/sick/dns);
+=======
+  P=/res/synapse/Sickness/dns;
+  IPTABLES=/system/bin/iptables;
+  DNS_STATUS=$(cat /res/synapse/Sickness/dns);
+>>>>>>> d307819e4... Add Synaspe Support
   if [ ! -z "$2" ]; then
   if [ "$2" == Disabled ]; then
 	if [ "$DNS_STATUS" != 0 ]; then
@@ -133,7 +156,11 @@ dns)
   fi
   ;;
 gps_zone)
+<<<<<<< HEAD
   P=/res/synapse/sick/gps_zone
+=======
+  P=/res/synapse/Sickness/gps_zone
+>>>>>>> d307819e4... Add Synaspe Support
   var_gps="/system/etc/gps.conf";
 
 # Backup original gps.conf in case of user revert.
@@ -242,7 +269,11 @@ gps_zone)
   fi
   ;;
 wifi_passwords_save)
+<<<<<<< HEAD
   WIFI=/sdcard/sick/wifi;
+=======
+  WIFI=/sdcard/Sickness/wifi;
+>>>>>>> d307819e4... Add Synaspe Support
   [ ! -d "$WIFI" ] && mkdir -p "$WIFI";
   chmod 755 $WIFI
   P=$WIFI/wifi.txt
@@ -251,11 +282,19 @@ wifi_passwords_save)
   echo WiFi Passwords saved
   ;;
 wifi_passwords_restore)
+<<<<<<< HEAD
   if [ -f /sdcard/sick/wifi/wifi.txt ]; then
 	P=/data/misc/wifi/wpa_supplicant.conf
 	svc wifi disable 2> /dev/null;
 	rm -f /data/misc/dhcp/dhcpcd*;
 	cat /sdcard/sick/wifi/wifi.txt > $P
+=======
+  if [ -f /sdcard/Sickness/wifi/wifi.txt ]; then
+	P=/data/misc/wifi/wpa_supplicant.conf
+	svc wifi disable 2> /dev/null;
+	rm -f /data/misc/dhcp/dhcpcd*;
+	cat /sdcard/Sickness/wifi/wifi.txt > $P
+>>>>>>> d307819e4... Add Synaspe Support
 	$BB chmod 660 $P;
 	svc wifi enable 2> /dev/null;
 	sleep 1
@@ -265,7 +304,11 @@ wifi_passwords_restore)
   fi
   ;;
 IPv6)
+<<<<<<< HEAD
   P=/res/synapse/sick/IPv6
+=======
+  P=/res/synapse/Sickness/IPv6
+>>>>>>> d307819e4... Add Synaspe Support
   if [ ! -z $2 ]; then
   if [ $2 == Disabled ]; then
 	echo 0 > $P

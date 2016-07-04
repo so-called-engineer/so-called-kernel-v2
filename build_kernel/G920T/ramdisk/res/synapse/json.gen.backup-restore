@@ -2,7 +2,11 @@
 
 cat << CTAG
 {
+<<<<<<< HEAD
     name:Backup & Restore,
+=======
+    name:BACKUP RESTORE,
+>>>>>>> d307819e4... Add Synaspe Support
     elements:[
 	{ SPane:{
 		title:"Profile"
@@ -14,7 +18,11 @@ cat << CTAG
 		title:"Profile Name",
 		description:"",
 		default:"None",
+<<<<<<< HEAD
 		action:"backup /res/synapse/sick/bck_prof",
+=======
+		action:"backup /res/synapse/Sickness/bck_prof",
+>>>>>>> d307819e4... Add Synaspe Support
 	}},
 	{ SSpacer:{
 		height:1
@@ -32,7 +40,11 @@ cat << CTAG
 			{
 				on:APPLY,
 				do:[ REFRESH, APPLY ],
+<<<<<<< HEAD
 				to:"backup /res/synapse/quintz/bck_prof"
+=======
+				to:"backup /res/synapse/Sickness/bck_prof"
+>>>>>>> d307819e4... Add Synaspe Support
 			}
 		]
 	}},
@@ -53,7 +65,11 @@ cat << CTAG
 			{
 				on:APPLY,
 				do:[ REFRESH, APPLY ],
+<<<<<<< HEAD
 				to:"backup /res/synapse/sick/bck_prof"
+=======
+				to:"backup /res/synapse/Sickness/bck_prof"
+>>>>>>> d307819e4... Add Synaspe Support
 			}
 		]
 	}},
@@ -104,7 +120,11 @@ cat << CTAG
 		title:"Kernel Name",
 		description:"",
 		default:"None",
+<<<<<<< HEAD
 		action:"backup /res/synapse/sick/bck_kernel",
+=======
+		action:"backup /res/synapse/Sickness/bck_kernel",
+>>>>>>> d307819e4... Add Synaspe Support
 	}},
 	{ SSpacer:{
 		height:1
@@ -122,7 +142,11 @@ cat << CTAG
 			{
 				on:APPLY,
 				do:[ REFRESH, APPLY ],
+<<<<<<< HEAD
 				to:"backup /res/synapse/sick/bck_kernel"
+=======
+				to:"backup /res/synapse/Sickness/bck_kernel"
+>>>>>>> d307819e4... Add Synaspe Support
 			}
 		]
 	}},

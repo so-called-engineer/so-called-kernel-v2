@@ -1,6 +1,9 @@
 #!/system/bin/sh
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> d307819e4... Add Synaspe Support
 cat << CTAG
 {
     name:CPU STATS,

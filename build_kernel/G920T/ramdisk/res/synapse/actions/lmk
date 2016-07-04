@@ -79,13 +79,21 @@ Exterminate(){
 
 if [ "$1" == "profile" ]; then
 	if [[ ! -z $2 ]]; then
+<<<<<<< HEAD
 		$BB echo "$2" > /res/synapse/sick/lmk_prof;
+=======
+		$BB echo "$2" > /res/synapse/Sickness/lmk_prof;
+>>>>>>> d307819e4... Add Synaspe Support
 			$2;
 			$BB echo "$MINFREE" > $P;
 			$BB echo "$COST" > /sys/module/lowmemorykiller/parameters/cost;
 	fi;
 	
+<<<<<<< HEAD
 	$BB echo "$(cat /res/synapse/sick/lmk_prof)";
+=======
+	$BB echo "$(cat /res/synapse/Sickness/lmk_prof)";
+>>>>>>> d307819e4... Add Synaspe Support
 else
 	if [[ ! -z $2 ]]; then
 		write "$1" "$2";

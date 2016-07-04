@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 # Busybox 
 if [ ! -f /su/xbin/busybox ]; then
 	BB=/system/xbin/busybox;
 else
 	BB=/su/xbin/busybox;
 fi;
+=======
+BB=/system/xbin/busybox;
+>>>>>>> d307819e4... Add Synaspe Support
 
 case $1 in
 gpu)

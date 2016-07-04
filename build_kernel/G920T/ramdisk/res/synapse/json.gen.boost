@@ -2,7 +2,11 @@
 
 cat << CTAG
 {
+<<<<<<< HEAD
     name:Touchboost,
+=======
+    name:BOOST,
+>>>>>>> d307819e4... Add Synaspe Support
     elements:[
 	{ SPane:{
 		title:"Input-Booster",

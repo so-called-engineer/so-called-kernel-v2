@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BB
 
 if [ ! -f /su/xbin/busybox ]; then
@@ -16,6 +17,20 @@ if [ -f $1 ]; then
 	fi;
 
 	$BB echo "`$BB cat $1`";
+=======
+BB=/system/xbin/busybox;
+
+if [ -f "$1" ]; then
+	if [[ ! -z "$2" ]]; then
+		PSM=$($BB cat /sys/kernel/power_suspend/power_suspend_mode);
+		
+		if [ "$PSM" == "1" ]; then
+			$BB echo "$2" > "$1"
+		fi;
+	fi;
+
+	$BB echo "$($BB cat "$1")";
+>>>>>>> d307819e4... Add Synaspe Support
 else
 	$BB echo "0";
 fi;

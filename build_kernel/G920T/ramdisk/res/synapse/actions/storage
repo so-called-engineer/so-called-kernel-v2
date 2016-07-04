@@ -1,8 +1,14 @@
+<<<<<<< HEAD
 if [ ! -f /su/xbin/busybox ]; then
 	BB=/system/xbin/busybox;
 else
 	BB=/su/xbin/busybox;
 fi;
+=======
+# By UpInTheAir for SkyHigh kernels
+
+BB=/system/xbin/busybox;
+>>>>>>> d307819e4... Add Synaspe Support
 
 if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
 	$BB mount -o remount,rw /;
@@ -10,7 +16,11 @@ fi;
 
 case $1 in
 usb_mode)
+<<<<<<< HEAD
   P=/res/synapse/sick/mass_storage
+=======
+  P=/res/synapse/Sickness/mass_storage
+>>>>>>> d307819e4... Add Synaspe Support
   if [ ! -z "$2" ]; then
   if [ "$2" == DEFAULT ]; then
     echo 0 > $P

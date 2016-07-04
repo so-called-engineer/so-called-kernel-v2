@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 BB=/system/xbin/busybox;
@@ -282,26 +283,48 @@ case $1 in
 		$BB chmod 755 $LOGS;
 
 		logcat -d > $saved;
+=======
+TIMESTAMP=$(date +%Y-%m-%d.%H.%M.%S);
+LOGS=/sdcard/Sickness/Logs;
+
+[ ! -d "$LOGS" ] && mkdir -p "$LOGS";
+chmod 755 $LOGS
+
+case $1 in
+	logcat)
+		saved="$LOGS/logcat-$TIMESTAMP.txt";
+		logcat -d > "$saved";
+>>>>>>> d307819e4... Add Synaspe Support
 	;;
 
 	dmesg)
 		saved="$LOGS/dmesg-$TIMESTAMP.txt";
+<<<<<<< HEAD
 		[ ! -d "$LOGS" ] && $BB mkdir -p "$LOGS";
 		$BB chmod 755 $LOGS;
 
 		$BB dmesg > $saved;
+=======
+		dmesg > "$saved";
+>>>>>>> d307819e4... Add Synaspe Support
 	;;
 
 	kmsg)
 		kmsg=/proc/last_kmsg;
 		if [ -f $kmsg ]; then
 			saved="$LOGS/last_kmsg-$TIMESTAMP.txt";
+<<<<<<< HEAD
 			[ ! -d "$LOGS" ] && $BB mkdir -p "$LOGS";
 			$BB chmod 755 $LOGS;
 
 			$BB cp -f $kmsg $saved;
 		else
 			$BB echo "$kmsg not found.";
+=======
+			cp -f $kmsg "$saved";
+		else
+			echo "$kmsg not found.";
+>>>>>>> d307819e4... Add Synaspe Support
 		fi;
 	;;
 esac;
@@ -311,6 +334,9 @@ case $1 in
 		echo "Logfile saved to $saved";
 	;;
 esac;
+<<<<<<< HEAD
 
 $BB mount -t rootfs -o remount,ro rootfs;
 $BB mount -o remount,ro /system;
+=======
+>>>>>>> d307819e4... Add Synaspe Support

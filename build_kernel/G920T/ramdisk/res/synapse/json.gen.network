@@ -1,5 +1,9 @@
 #!/system/bin/sh
 
+<<<<<<< HEAD
+=======
+BB=/system/xbin/busybox;
+>>>>>>> d307819e4... Add Synaspe Support
 
 cat << CTAG
 {
@@ -21,7 +25,17 @@ cat << CTAG
 	{ SSpacer:{
 		height:1
 	}},
+<<<<<<< HEAD
 	
+=======
+	{ STitleBar:{
+		title:"Screen mirroring / AllShare Cast fix",
+		description:"Possible screen mirroring / AllShare Cast fix for rooted devices, works for some. Turn OFF WIFI first."
+	}},
+	{ SSpacer:{
+		height:1
+	}},
+>>>>>>> d307819e4... Add Synaspe Support
 	{ SOptionList:{
 		description:"Default is Enabled.\n",
 		default:$(echo "$(/res/synapse/actions/mirror mirror_fix)"),
@@ -33,7 +47,11 @@ cat << CTAG
 	}},
 	{ SPane:{
 		title:"WiFi Passwords",
+<<<<<<< HEAD
 		description:"Save or restore your WiFi Passwords in /sdcard/Sickness/wifi/ folder."
+=======
+		description:"Save or restore your WiFi Passwords in /sdcard/SkyHigh/wifi/ folder."
+>>>>>>> d307819e4... Add Synaspe Support
 	}},
 	{ SSpacer:{
 		height:1

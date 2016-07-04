@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Busybox 
 if [ -e /su/xbin/busybox ]; then
 	BB=/su/xbin/busybox;
@@ -15,3 +16,12 @@ if [ -f "$1" ]; then
 
 	$BB echo "$($BB cat "$1")";
 fi;
+=======
+BB=/system/xbin/busybox;
+
+if [[ ! -z $2 ]]; then
+	echo "$2" > "$1"
+fi
+
+$BB echo "$(cat "$1")"
+>>>>>>> d307819e4... Add Synaspe Support

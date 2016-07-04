@@ -1,6 +1,10 @@
 #!/system/bin/sh
 
+<<<<<<< HEAD
 
+=======
+BB=/system/xbin/busybox;
+>>>>>>> d307819e4... Add Synaspe Support
 
 cat << CTAG
 {
@@ -87,7 +91,31 @@ cat << CTAG
 		label:"Remount RootFS as Read-Only",
 		action:"$BB mount -t rootfs -o remount,ro rootfs;
 		echo Remounted RootFS as Read-Only!;"
+<<<<<<< HEAD
 	
+=======
+	}},
+	{ SSpacer:{
+		height:2
+	}},
+	{ SPane:{
+		title:"Scrolling Cache control",
+		description:"Disable to increase in-app scrolling speed and responsiveness. Default is (2). If you experience problems, set to (1). REBOOT REQUIRED !!"
+	}},
+	{ SSpacer:{
+		height:1
+	}},
+	{ SDescription:{
+		description:"0- force to enable regardless of app setting.\n1- enable unless app specifies.\n2- disable unless app specifies.\n3- force to disable regardless of app setting."
+	}},
+	{ SSpacer:{
+		height:1
+	}},
+	{ SOptionList:{
+		default:$(echo "$(/res/synapse/actions/devtools scr_cache)"),
+                action:"devtools scr_cache",
+		values:[0, 1, 2, 3,]
+>>>>>>> d307819e4... Add Synaspe Support
 	}},
 	{ SSpacer:{
 		height:1

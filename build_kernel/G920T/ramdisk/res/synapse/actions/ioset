@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #BB
 
 if [ ! -f /su/xbin/busybox ]; then
@@ -5,6 +6,9 @@ if [ ! -f /su/xbin/busybox ]; then
 else
 	BB=/su/xbin/busybox;
 fi;
+=======
+BB=/system/xbin/busybox;
+>>>>>>> d307819e4... Add Synaspe Support
 
 if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
 	$BB mount -o remount,rw /;

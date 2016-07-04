@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Backup profile/kernel
 
 
@@ -6,13 +7,22 @@ if [ ! -f /su/xbin/busybox ]; then
 else
 	BB=/su/xbin/busybox;
 fi;
+=======
+# Modified from original apb_axel & neobuddy89 implementations by UpInTheAir@XDA for SkyHigh kernels
+
+BB=/system/xbin/busybox;
+>>>>>>> d307819e4... Add Synaspe Support
 
 if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
 	$BB mount -o remount,rw /;
 fi;
 
 if [ -d /data/data/com.af.synapse ]; then
+<<<<<<< HEAD
   SYNAPSE_SD_DIR=/sdcard/sick/Synapse;
+=======
+  SYNAPSE_SD_DIR=/sdcard/Sickness/Synapse;
+>>>>>>> d307819e4... Add Synaspe Support
   SYNAPSE_BOOT_DIR=$SYNAPSE_SD_DIR/kernel_backups;
   SYNAPSE_CONFIG_DIR=$SYNAPSE_SD_DIR/saved_configs;
 
@@ -57,15 +67,24 @@ case "$1" in
 	;;
 
 	keepboot)
+<<<<<<< HEAD
 		BCK_PROF=$($BB cat /res/synapse/sick/bck_kernel);
+=======
+		BCK_PROF=$($BB cat /res/synapse/Sickness/bck_kernel);
+>>>>>>> d307819e4... Add Synaspe Support
 		BCK_PROF=$($BB echo "${BCK_PROF// /_}");
 	
 		if [ "$BCK_PROF" == "None" ]; then
 			$BB echo "Enter a kernel name first and then apply.";
 		else
 			$BB dd if="$2" of="$SYNAPSE_BOOT_DIR/$BCK_PROF.img" 2> /dev/null;
+<<<<<<< HEAD
 			$BB echo "None" > /res/synapse/sick/bck_prof;
 			$BB echo "$BCK_PROF.img saved to /sdcard/sick. Press the [Restart Synapse] button below to see updated list.";
+=======
+			$BB echo "None" > /res/synapse/Sickness/bck_prof;
+			$BB echo "$BCK_PROF.img saved to /sdcard/SkyHigh. Press the [Restart Synapse] button below to see updated list.";
+>>>>>>> d307819e4... Add Synaspe Support
 		fi;
 	;;
 
