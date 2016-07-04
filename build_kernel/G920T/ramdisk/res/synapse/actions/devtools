@@ -7,6 +7,10 @@ fi;
 
 # SQLite log location
 LOGS=/sdcard/sick/Logs/SQLite.txt;
+BB=/system/xbin/busybox;
+
+# SQLite log location
+LOGS=/sdcard/Sickness/Logs/SQLite.txt;
 
 if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
 	$BB mount -o remount,rw /;
@@ -69,6 +73,7 @@ case $1 in
 
 	# Create Log folder on sdcard
 	LOG=/sdcard/sick/Logs;
+	LOG=/sdcard/Sickness/Logs;
 
 	[ ! -d "$LOG" ] && mkdir -p "$LOG";
 	chmod 755 $LOG
@@ -167,6 +172,7 @@ case $1 in
   ;;
 scr_cache)
   P=/res/synapse/sick/scr_cache
+  P=/res/synapse/Sickness/scr_cache
   if [ ! -z "$2" ]; then
   if [ "$2" == 0 ]; then
     echo 0 > $P
@@ -194,6 +200,7 @@ scr_cache)
   ;;
 spcm_service)
   P=/res/synapse/sick/spcm_service
+  P=/res/synapse/Sickness/spcm_service
   if [ ! -z "$2" ]; then
   if [ "$2" == Enabled ]; then
     echo Enabled > $P
@@ -211,6 +218,7 @@ spcm_service)
   ;;
 SystemUpdateService)
   P=/res/synapse/sick/SystemUpdateService
+  P=/res/synapse/Sickness/SystemUpdateService
   if [ ! -z "$2" ]; then
   if [ "$2" == Enabled ]; then
     echo Enabled > $P

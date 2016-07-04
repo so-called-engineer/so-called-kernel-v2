@@ -4,6 +4,7 @@ if [ ! -f /su/xbin/busybox ]; then
 else
 	BB=/su/xbin/busybox;
 fi;
+BB=/system/xbin/busybox;
 
 case $1 in
 susp)

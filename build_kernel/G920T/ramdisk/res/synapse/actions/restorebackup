@@ -6,6 +6,9 @@ if [ ! -f /su/xbin/busybox ]; then
 else
 	BB=/su/xbin/busybox;
 fi;
+# Modified from original apb_axel & neobuddy89 implementations by UpInTheAir@XDA for SkyHigh kernels
+
+BB=/system/xbin/busybox;
 
 if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
 	$BB mount -o remount,rw /;
@@ -13,6 +16,7 @@ fi;
 
 if [ -d /data/data/com.af.synapse ]; then
   SYNAPSE_SD_DIR=/sdcard/sick/Synapse;
+  SYNAPSE_SD_DIR=/sdcard/Sickness/Synapse;
   SYNAPSE_BOOT_DIR=$SYNAPSE_SD_DIR/kernel_backups;
   SYNAPSE_CONFIG_DIR=$SYNAPSE_SD_DIR/saved_configs;
 
@@ -58,6 +62,7 @@ case "$1" in
 
 	keepboot)
 		BCK_PROF=$($BB cat /res/synapse/sick/bck_kernel);
+		BCK_PROF=$($BB cat /res/synapse/Sickness/bck_kernel);
 		BCK_PROF=$($BB echo "${BCK_PROF// /_}");
 	
 		if [ "$BCK_PROF" == "None" ]; then
@@ -66,6 +71,8 @@ case "$1" in
 			$BB dd if="$2" of="$SYNAPSE_BOOT_DIR/$BCK_PROF.img" 2> /dev/null;
 			$BB echo "None" > /res/synapse/sick/bck_prof;
 			$BB echo "$BCK_PROF.img saved to /sdcard/sick. Press the [Restart Synapse] button below to see updated list.";
+			$BB echo "None" > /res/synapse/Sickness/bck_prof;
+			$BB echo "$BCK_PROF.img saved to /sdcard/SkyHigh. Press the [Restart Synapse] button below to see updated list.";
 		fi;
 	;;
 

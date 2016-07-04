@@ -3,6 +3,7 @@
 cat << CTAG
 {
     name:Backup & Restore,
+    name:BACKUP RESTORE,
     elements:[
 	{ SPane:{
 		title:"Profile"
@@ -15,6 +16,7 @@ cat << CTAG
 		description:"",
 		default:"None",
 		action:"backup /res/synapse/sick/bck_prof",
+		action:"backup /res/synapse/Sickness/bck_prof",
 	}},
 	{ SSpacer:{
 		height:1
@@ -33,6 +35,7 @@ cat << CTAG
 				on:APPLY,
 				do:[ REFRESH, APPLY ],
 				to:"backup /res/synapse/quintz/bck_prof"
+				to:"backup /res/synapse/Sickness/bck_prof"
 			}
 		]
 	}},
@@ -54,6 +57,7 @@ cat << CTAG
 				on:APPLY,
 				do:[ REFRESH, APPLY ],
 				to:"backup /res/synapse/sick/bck_prof"
+				to:"backup /res/synapse/Sickness/bck_prof"
 			}
 		]
 	}},
@@ -105,6 +109,7 @@ cat << CTAG
 		description:"",
 		default:"None",
 		action:"backup /res/synapse/sick/bck_kernel",
+		action:"backup /res/synapse/Sickness/bck_kernel",
 	}},
 	{ SSpacer:{
 		height:1
@@ -123,6 +128,7 @@ cat << CTAG
 				on:APPLY,
 				do:[ REFRESH, APPLY ],
 				to:"backup /res/synapse/sick/bck_kernel"
+				to:"backup /res/synapse/Sickness/bck_kernel"
 			}
 		]
 	}},

@@ -3,6 +3,9 @@ if [ ! -f /su/xbin/busybox ]; then
 else
 	BB=/su/xbin/busybox;
 fi;
+# By UpInTheAir for SkyHigh kernels
+
+BB=/system/xbin/busybox;
 
 if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
 	$BB mount -o remount,rw /;
@@ -11,6 +14,7 @@ fi;
 case $1 in
 usb_mode)
   P=/res/synapse/sick/mass_storage
+  P=/res/synapse/Sickness/mass_storage
   if [ ! -z "$2" ]; then
   if [ "$2" == DEFAULT ]; then
     echo 0 > $P

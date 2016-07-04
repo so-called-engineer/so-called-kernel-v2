@@ -1,27 +1,27 @@
 #!/system/bin/sh
 
-
 cat << CTAG
 {
     name:INFO,
     elements:[
 	{ SPane:{
 		title:"Kernel Build by",
-		description:"<a href='http://forum.xda-developers.com/member.php?u=4921688'>The Sickness</a>."
+		description:"<a href='https://forum.xda-developers.com/member.php?u=9158973</a>."
 	}},
 	{ SSpacer:{
 		height:1
 	}},
 	{ SPane:{
 		title:"Kernel Thread",
-		description:"<a href='http://forum.xda-developers.com/tmobile-galaxy-s6/orig-development/kernels-twisted-kernel-6-0-1-mm-5-11-16-t3377283'>XDA</a>"
+		description:"</a>"
+		description:"<a href='None Yet'>XDA</a>"
 	}},
 	{ SSpacer:{
 		height:1
 	}},
 	{ SPane:{
 		title:"Source",
-		description:"Modified & compiled from Samsung OSRC: <a href='https://github.com/The-Sickness/S6-MM'>GitHub</a>."
+		description:"Modified & compiled from Samsung OSRC: <a href='https://github.com/so-called-engineer/so-called-kernel-v2</a>."
 	}},
 	{ SSpacer:{
 		height:1
@@ -30,16 +30,7 @@ cat << CTAG
 		title:"Special Thanks to"
 	}},
 	{ SDescription:{
-		description:"All Devs that inspire me to cherry-pick from and allow me to adapt to this kernel. In particular, AndreiLux and halaszk88<a href=''></a>"
-	}},
-	{ SSpacer:{
-		height:1
-	}},
-	{ SPane:{
-		title:"NO Thanks to"
-	}},
-	{ SDescription:{
-		description:"All haters...<a href=''></a>"
+		description:"All Devs that inspire me to cherry-pick from and allow me to adapt to this kernel.<a href=''></a>"
 	}},
 	{ SSpacer:{
 		height:1

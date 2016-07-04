@@ -1,3 +1,5 @@
+# Original by halaskk88
+# Modified by UpInTheAir for SkyHigh kernels
 
 BB=/system/xbin/busybox;
 SWAP=/dev/block/vnswap0;
@@ -9,6 +11,7 @@ fi;
 case $1 in
 vnswap0)
   P=/res/synapse/sick/vnswap0
+  P=/res/synapse/Sickness/vnswap0
   if [ ! -z "$2" ]; then
   if [ "$2" == Disabled ]; then
 	$BB swapoff $SWAP > /dev/null 2>&1
@@ -20,6 +23,7 @@ vnswap0)
 	$BB swapon $SWAP > /dev/null 2>&1
 	$BB sync;
 	$BB echo "190" > /proc/sys/vm/swappiness;
+	$BB echo "200" > /proc/sys/vm/swappiness;
 	echo 1 > $P
   fi; fi
   copy=$(cat $P)
