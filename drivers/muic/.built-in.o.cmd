@@ -1,0 +1,1 @@
+cmd_drivers/muic/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/muic/built-in.o drivers/muic/muic-core.o drivers/muic/muic_notifier.o drivers/muic/max77843-muic.o drivers/muic/max77843-muic-afc.o drivers/muic/max77833-muic.o drivers/muic/max77833-muic-afc.o ; scripts/mod/modpost drivers/muic/built-in.o

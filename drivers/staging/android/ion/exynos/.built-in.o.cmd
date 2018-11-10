@@ -1,0 +1,1 @@
+cmd_drivers/staging/android/ion/exynos/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/staging/android/ion/exynos/built-in.o drivers/staging/android/ion/exynos/exynos_ion_v2.o ; scripts/mod/modpost drivers/staging/android/ion/exynos/built-in.o

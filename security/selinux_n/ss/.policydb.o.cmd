@@ -3,7 +3,7 @@ cmd_security/selinux/ss/policydb.o := /home/so-called-engineer/aarch64-linux-and
 source_security/selinux/ss/policydb.o := security/selinux/ss/policydb.c
 
 deps_security/selinux/ss/policydb.o := \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
     $(wildcard include/config/mls.h) \
   include/linux/kernel.h \
     $(wildcard include/config/lbdaf.h) \

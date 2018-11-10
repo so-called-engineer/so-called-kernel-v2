@@ -3,7 +3,9 @@ cmd_security/selinux/ss/status.o := /home/so-called-engineer/aarch64-linux-andro
 source_security/selinux/ss/status.o := security/selinux/ss/status.c
 
 deps_security/selinux/ss/status.o := \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/fake/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
+    $(wildcard include/config/security/selinux/never/enforce.h) \
   include/linux/kernel.h \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/preempt/voluntary.h) \
@@ -418,6 +420,7 @@ deps_security/selinux/ss/status.o := \
     $(wildcard include/config/migration.h) \
   security/selinux/include/avc.h \
     $(wildcard include/config/security/selinux/develop.h) \
+    $(wildcard include/config/security/selinux/enforcing.h) \
     $(wildcard include/config/security/selinux/avc/stats.h) \
   include/linux/kdev_t.h \
   include/uapi/linux/kdev_t.h \

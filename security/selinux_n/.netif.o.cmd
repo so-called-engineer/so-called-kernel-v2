@@ -3,7 +3,7 @@ cmd_security/selinux/netif.o := /home/so-called-engineer/aarch64-linux-android-4
 source_security/selinux/netif.o := security/selinux/netif.c
 
 deps_security/selinux/netif.o := \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
   include/linux/init.h \
     $(wildcard include/config/broken/rodata.h) \
     $(wildcard include/config/deferred/initcalls.h) \
@@ -852,6 +852,7 @@ deps_security/selinux/netif.o := \
   include/uapi/linux/binfmts.h \
   security/selinux/include/avc.h \
     $(wildcard include/config/security/selinux/develop.h) \
+    $(wildcard include/config/security/selinux/enforcing.h) \
     $(wildcard include/config/security/selinux/avc/stats.h) \
   include/linux/audit.h \
   include/uapi/linux/audit.h \

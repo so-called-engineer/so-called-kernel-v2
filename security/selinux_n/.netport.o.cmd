@@ -3,7 +3,7 @@ cmd_security/selinux/netport.o := /home/so-called-engineer/aarch64-linux-android
 source_security/selinux/netport.o := security/selinux/netport.c
 
 deps_security/selinux/netport.o := \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
   include/linux/types.h \
     $(wildcard include/config/uid16.h) \
     $(wildcard include/config/lbdaf.h) \
@@ -907,6 +907,7 @@ deps_security/selinux/netport.o := \
   security/selinux/flask.h \
   security/selinux/include/avc.h \
     $(wildcard include/config/security/selinux/develop.h) \
+    $(wildcard include/config/security/selinux/enforcing.h) \
     $(wildcard include/config/security/selinux/avc/stats.h) \
   include/linux/audit.h \
   include/uapi/linux/audit.h \

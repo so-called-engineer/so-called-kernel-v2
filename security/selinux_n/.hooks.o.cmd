@@ -6,7 +6,8 @@ deps_security/selinux/hooks.o := \
     $(wildcard include/config/rkp/ns/prot.h) \
     $(wildcard include/config/rkp/kdp.h) \
     $(wildcard include/config/security/selinux/develop.h) \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
+    $(wildcard include/config/security/selinux/never/enforce.h) \
     $(wildcard include/config/security/selinux/bootparam.h) \
     $(wildcard include/config/security/selinux/bootparam/value.h) \
     $(wildcard include/config/lsm/mmap/min/addr.h) \
@@ -1059,6 +1060,7 @@ deps_security/selinux/hooks.o := \
   /home/so-called-engineer/Kernel/arch/arm64/include/asm/shmparam.h \
   /home/so-called-engineer/Kernel/include/uapi/asm-generic/shmparam.h \
   security/selinux/include/avc.h \
+    $(wildcard include/config/security/selinux/enforcing.h) \
     $(wildcard include/config/security/selinux/avc/stats.h) \
   include/linux/lsm_audit.h \
     $(wildcard include/config/security/smack.h) \

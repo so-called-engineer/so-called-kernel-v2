@@ -4,7 +4,8 @@ source_security/selinux/avc.o := security/selinux/avc.c
 
 deps_security/selinux/avc.o := \
     $(wildcard include/config/security/selinux/avc/stats.h) \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
+    $(wildcard include/config/security/selinux/never/enforce.h) \
   include/linux/types.h \
     $(wildcard include/config/uid16.h) \
     $(wildcard include/config/lbdaf.h) \
@@ -905,6 +906,7 @@ deps_security/selinux/avc.o := \
   include/linux/hash.h \
   security/selinux/include/avc.h \
     $(wildcard include/config/security/selinux/develop.h) \
+    $(wildcard include/config/security/selinux/enforcing.h) \
   include/linux/lsm_audit.h \
     $(wildcard include/config/security/smack.h) \
     $(wildcard include/config/security/apparmor.h) \

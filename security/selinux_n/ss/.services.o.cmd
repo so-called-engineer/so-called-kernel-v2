@@ -3,7 +3,7 @@ cmd_security/selinux/ss/services.o := /home/so-called-engineer/aarch64-linux-and
 source_security/selinux/ss/services.o := security/selinux/ss/services.c
 
 deps_security/selinux/ss/services.o := \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
     $(wildcard include/config/change.h) \
     $(wildcard include/config/rkp/kdp.h) \
     $(wildcard include/config/netlabel.h) \
@@ -873,6 +873,7 @@ deps_security/selinux/ss/services.o := \
   security/selinux/flask.h \
   security/selinux/include/avc.h \
     $(wildcard include/config/security/selinux/develop.h) \
+    $(wildcard include/config/security/selinux/enforcing.h) \
     $(wildcard include/config/security/selinux/avc/stats.h) \
   include/linux/lsm_audit.h \
     $(wildcard include/config/security/smack.h) \

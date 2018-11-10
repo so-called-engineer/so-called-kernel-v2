@@ -1,0 +1,1 @@
+cmd_drivers/soc/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/soc/built-in.o drivers/soc/samsung/built-in.o ; scripts/mod/modpost drivers/soc/built-in.o

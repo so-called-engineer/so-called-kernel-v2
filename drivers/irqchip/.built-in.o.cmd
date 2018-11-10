@@ -1,0 +1,1 @@
+cmd_drivers/irqchip/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/irqchip/built-in.o drivers/irqchip/irqchip.o drivers/irqchip/irq-gic.o ; scripts/mod/modpost drivers/irqchip/built-in.o

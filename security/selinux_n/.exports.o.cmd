@@ -3,7 +3,8 @@ cmd_security/selinux/exports.o := /home/so-called-engineer/aarch64-linux-android
 source_security/selinux/exports.o := security/selinux/exports.c
 
 deps_security/selinux/exports.o := \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
+    $(wildcard include/config/security/selinux/never/enforce.h) \
   include/linux/module.h \
     $(wildcard include/config/sysfs.h) \
     $(wildcard include/config/modules.h) \
@@ -584,6 +585,7 @@ deps_security/selinux/exports.o := \
   security/selinux/flask.h \
   security/selinux/include/avc.h \
     $(wildcard include/config/security/selinux/develop.h) \
+    $(wildcard include/config/security/selinux/enforcing.h) \
     $(wildcard include/config/security/selinux/avc/stats.h) \
   include/linux/kdev_t.h \
   include/uapi/linux/kdev_t.h \

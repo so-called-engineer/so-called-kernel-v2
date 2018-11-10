@@ -1,0 +1,1 @@
+cmd_drivers/scsi/ufs/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/scsi/ufs/built-in.o drivers/scsi/ufs/ufshcd.o drivers/scsi/ufs/ufs_quirks.o drivers/scsi/ufs/ufshcd-pltfrm.o drivers/scsi/ufs/ufs-exynos.o ; scripts/mod/modpost drivers/scsi/ufs/built-in.o

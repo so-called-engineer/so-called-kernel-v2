@@ -1,0 +1,1 @@
+cmd_drivers/power/power_supply.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/power/power_supply.o drivers/power/power_supply_core.o drivers/power/power_supply_sysfs.o ; scripts/mod/modpost drivers/power/power_supply.o

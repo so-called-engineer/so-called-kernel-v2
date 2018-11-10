@@ -1,0 +1,1 @@
+cmd_drivers/pci/host/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/pci/host/built-in.o drivers/pci/host/pcie-designware.o drivers/pci/host/pci-exynos.o ; scripts/mod/modpost drivers/pci/host/built-in.o

@@ -371,7 +371,7 @@ deps_security/selinux/ss/avtab.o := \
   security/selinux/include/security.h \
     $(wildcard include/config/security/selinux/policydb/version/max.h) \
     $(wildcard include/config/security/selinux/policydb/version/max/value.h) \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
     $(wildcard include/config/netlabel.h) \
   include/linux/dcache.h \
   include/linux/rculist.h \

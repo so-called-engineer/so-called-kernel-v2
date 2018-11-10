@@ -5,8 +5,10 @@ source_security/selinux/selinuxfs.o := security/selinux/selinuxfs.c
 deps_security/selinux/selinuxfs.o := \
     $(wildcard include/config/tz/iccc.h) \
     $(wildcard include/config/security/selinux/checkreqprot/value.h) \
+    $(wildcard include/config/security/selinux/fake/enforce.h) \
     $(wildcard include/config/security/selinux/develop.h) \
-    $(wildcard include/config/always/enforce.h) \
+    $(wildcard include/config/security/selinux/always/enforce.h) \
+    $(wildcard include/config/security/selinux/never/enforce.h) \
     $(wildcard include/config/security/selinux/disable.h) \
     $(wildcard include/config/security/selinux/avc/stats.h) \
   include/linux/kernel.h \
@@ -647,6 +649,7 @@ deps_security/selinux/selinuxfs.o := \
   include/linux/ctype.h \
   security/selinux/flask.h \
   security/selinux/include/avc.h \
+    $(wildcard include/config/security/selinux/enforcing.h) \
   include/linux/lsm_audit.h \
     $(wildcard include/config/security/smack.h) \
     $(wildcard include/config/security/apparmor.h) \
