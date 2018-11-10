@@ -1,5 +1,6 @@
 #!/system/bin/sh
 
+
 cat << CTAG
 {
     name:CPU STATS,

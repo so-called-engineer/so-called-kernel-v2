@@ -1,5 +1,7 @@
 #!/system/bin/sh
 
+
+
 cat << CTAG
 {
     name:POWER SUSPEND,

@@ -1,12 +1,17 @@
-# By UpInTheAir for SkyHigh kernels
 
-BB=/system/xbin/busybox;
+if [ ! -f /su/xbin/busybox ]; then
+	BB=/system/xbin/busybox;
+else
+	BB=/su/xbin/busybox;
+fi;
+P=/sys/devices/battery
+
 
 case $1 in
 fuel-gauge)
-P=/sys/devices/battery.51/power_supply/battery/fg_reset_cap;
+FG=$P/power_supply/battery/fg_reset_cap;
 $BB chmod 666 $P;
-  echo 1 > $P
+  echo 1 > $FG
   echo "The fuel gauge chip is reset. Give it some time to normalize the gauge."
   sleep 2;
   ;;

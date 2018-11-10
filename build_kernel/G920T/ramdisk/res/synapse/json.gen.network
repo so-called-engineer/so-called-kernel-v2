@@ -1,6 +1,5 @@
 #!/system/bin/sh
 
-BB=/system/xbin/busybox;
 
 cat << CTAG
 {
@@ -22,13 +21,7 @@ cat << CTAG
 	{ SSpacer:{
 		height:1
 	}},
-	{ STitleBar:{
-		title:"Screen mirroring / AllShare Cast fix",
-		description:"Possible screen mirroring / AllShare Cast fix for rooted devices, works for some. Turn OFF WIFI first."
-	}},
-	{ SSpacer:{
-		height:1
-	}},
+	
 	{ SOptionList:{
 		description:"Default is Enabled.\n",
 		default:$(echo "$(/res/synapse/actions/mirror mirror_fix)"),
@@ -40,7 +33,7 @@ cat << CTAG
 	}},
 	{ SPane:{
 		title:"WiFi Passwords",
-		description:"Save or restore your WiFi Passwords in /sdcard/SkyHigh/wifi/ folder."
+		description:"Save or restore your WiFi Passwords in /sdcard/Sickness/wifi/ folder."
 	}},
 	{ SSpacer:{
 		height:1

@@ -40,7 +40,7 @@ cat << CTAG
 	}},
 	{ SOptionList:{
 		title:"Mali power policy control",
-		description:"Default is coarse_demand.\n",
+		description:" ",
 		default:$(echo "$(/res/synapse/actions/bracket-option /sys/devices/14ac0000.mali/power_policy)"),
 		action:"bracket-option /sys/devices/14ac0000.mali/power_policy",
 		values:[
@@ -50,6 +50,50 @@ cat << CTAG
 			done
 `
 		]
+	}},
+	{ SSpacer:{
+		height:1
+	}},
+	{ SPane:{
+		title:"GPU Interactive governor tunables"
+	}},
+	{ SSpacer:{
+		height:1
+	}},
+	{ SSeekBar:{
+		title:"GPU highspeed clock",
+		description:"Boost the minimum frequency the GPU scales up to.\n",
+		default:$(cat /sys/devices/14ac0000.mali/highspeed_clock),
+		unit:" MHz",
+		action:"generic /sys/devices/14ac0000.mali/highspeed_clock",
+		values:{
+`
+			while read -r FREQ VOLT; do
+				LABEL=$(($FREQ))
+				echo "$FREQ:\"${LABEL} MHz\", "
+			done < /sys/devices/14ac0000.mali/volt_table
+`
+                }
+	}},
+	{ SSpacer:{
+		height:1
+	}},
+	{ SSeekBar:{
+		title:"GPU highspeed load",
+		description:"Jump the minimum frequency level to highspeed_clock when the GPU utilization over this value.\n",
+		default:$(cat /sys/devices/14ac0000.mali/highspeed_load),
+		max:100, min:1, unit:" %", step:1,
+		action:"generic /sys/devices/14ac0000.mali/highspeed_load",
+	}},
+	{ SSpacer:{
+		height:1
+	}},
+	{ SSeekBar:{
+		title:"GPU highspeed delay",
+		description:"Jump the minimum frequency level to highspeed_clock when the GPU utilization over highspeed_load and over this delayed value.\n",
+		default:$(cat /sys/devices/14ac0000.mali/highspeed_delay),
+		max:5, min:0, unit:" ms", step:1,
+		action:"generic /sys/devices/14ac0000.mali/highspeed_delay",
 	}},
 	{ SSpacer:{
 		height:1
@@ -98,59 +142,26 @@ cat << CTAG
 		height:1
 	}},
 	{ SPane:{
-		title:"GPU Governor",
-		description:"Booster may give improved graphic & benchmark performance at the expense of battery."
-	}},
-	{ SSpacer:{
-		height:1
-	}},
-	{ SOptionList:{
-		description:"Default is Interactive.\n",
-		default:$(echo "$(/res/synapse/actions/gpu_governor gpu_gov)"),
-		action:"gpu_governor gpu_gov",
-		values:[Default, Interactive, Static, Booster]
-	}},
-	{ SPane:{
-		title:"GPU Interactive governor tunables"
-	}},
-	{ SSpacer:{
-		height:1
+		title:"HPM Voltage Control",
 	}},
 	{ SSeekBar:{
-		title:"GPU highspeed clock",
-		description:"Boost the minimum frequency the GPU scales up to.\n",
-		default:$(cat /sys/devices/14ac0000.mali/highspeed_clock),
-		unit:" MHz",
-		action:"generic /sys/devices/14ac0000.mali/highspeed_clock",
-		values:{
+		title:"Mali HPM voltage margin",
+		description:"Set the maximum voltage margin the APM undervolts down to.\n",
+		default:$(cat /sys/kernel/debug/mailbox/g3d_cl_margin),
+		action:"generic /sys/kernel/debug/mailbox/g3d_cl_margin",
+		unit:" µV", weight:6250.0, min:0, step:1, max:10
+	}},
+	{ SSpacer:{
+		height:1
+	}},
+	{ SPane:{ title:"GPU voltage control" }},
 `
-			while read -r FREQ VOLT; do
-				LABEL=$(($FREQ))
-				echo "$FREQ:\"${LABEL} MHz\", "
-			done < /sys/devices/14ac0000.mali/volt_table
+	while read -r FREQ VOLT; do
+		echo '{ SSeekBar:{'
+			echo 'title:"'"$FREQ"' MHz", default:'"$VOLT"', '
+			echo 'action:"gpuvolt '"${FREQ}"'", unit:" mV", weight:0.001, min:500000, max:1000000, step:6250 }}, '
+	done < /sys/devices/14ac0000.mali/volt_table
 `
-                }
-	}},
-	{ SSpacer:{
-		height:1
-	}},
-	{ SSeekBar:{
-		title:"GPU highspeed load",
-		description:"Jump the minimum frequency level to highspeed_clock when the GPU utilization over this value.\n",
-		default:$(cat /sys/devices/14ac0000.mali/highspeed_load),
-		max:100, min:1, unit:" %", step:1,
-		action:"generic /sys/devices/14ac0000.mali/highspeed_load",
-	}},
-	{ SSpacer:{
-		height:1
-	}},
-	{ SSeekBar:{
-		title:"GPU highspeed delay",
-		description:"Jump the minimum frequency level to highspeed_clock when the GPU utilization over highspeed_load and over this delayed value.\n",
-		default:$(cat /sys/devices/14ac0000.mali/highspeed_delay),
-		max:5, min:0, unit:" ms", step:1,
-		action:"generic /sys/devices/14ac0000.mali/highspeed_delay",
-	}},
 	{ SSpacer:{
 		height:1
 	}},

@@ -1,5 +1,11 @@
 #!/system/bin/sh
 
+if [ ! -f /su/xbin/busybox ]; then
+	BB=/system/xbin/busybox;
+else
+	BB=/su/xbin/busybox;
+fi;
+
 cat << CTAG
 {
     name:LOGS,

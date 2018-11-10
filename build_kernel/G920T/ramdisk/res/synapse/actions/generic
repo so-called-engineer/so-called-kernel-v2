@@ -1,7 +1,17 @@
-BB=/system/xbin/busybox;
+# Busybox 
+if [ -e /su/xbin/busybox ]; then
+	BB=/su/xbin/busybox;
+else if [ -e /sbin/busybox ]; then
+	BB=/sbin/busybox;
+else
+	BB=/system/xbin/busybox;
+fi;
+fi;
 
-if [[ ! -z $2 ]]; then
-	echo "$2" > "$1"
-fi
+if [ -f "$1" ]; then
+	if [[ ! -z "$2" ]]; then
+		$BB echo "$2" > "$1"
+	fi;
 
-$BB echo "$(cat "$1")"
+	$BB echo "$($BB cat "$1")";
+fi;

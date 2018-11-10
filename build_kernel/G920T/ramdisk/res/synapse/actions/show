@@ -1,4 +1,9 @@
-BB=/system/xbin/busybox;
+# Busybox 
+if [ ! -f /su/xbin/busybox ]; then
+	BB=/system/xbin/busybox;
+else
+	BB=/su/xbin/busybox;
+fi;
 
 case $1 in
 susp)
