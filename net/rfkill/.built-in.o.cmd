@@ -1,0 +1,1 @@
+cmd_net/rfkill/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o net/rfkill/built-in.o net/rfkill/rfkill.o ; scripts/mod/modpost net/rfkill/built-in.o

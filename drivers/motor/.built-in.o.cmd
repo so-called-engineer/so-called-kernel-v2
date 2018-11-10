@@ -1,0 +1,1 @@
+cmd_drivers/motor/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/motor/built-in.o drivers/motor/max77833_haptic.o drivers/motor/max77843_haptic.o ; scripts/mod/modpost drivers/motor/built-in.o

@@ -1,0 +1,1 @@
+cmd_drivers/gpu/drm/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/gpu/drm/built-in.o drivers/gpu/drm/i2c/built-in.o ; scripts/mod/modpost drivers/gpu/drm/built-in.o

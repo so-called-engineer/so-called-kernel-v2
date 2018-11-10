@@ -1,0 +1,1 @@
+cmd_fs/exfat/exfat_fs.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o fs/exfat/exfat_fs.o fs/exfat/exfat_super.o ; scripts/mod/modpost fs/exfat/exfat_fs.o

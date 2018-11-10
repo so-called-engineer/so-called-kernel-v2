@@ -1,0 +1,1 @@
+cmd_net/ipv4/tcp_htcp.ko := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL -r  -T /home/so-called-engineer/kernel/scripts/module-common.lds --build-id  -o net/ipv4/tcp_htcp.ko net/ipv4/tcp_htcp.o net/ipv4/tcp_htcp.mod.o

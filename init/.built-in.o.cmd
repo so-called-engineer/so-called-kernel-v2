@@ -1,0 +1,1 @@
+cmd_init/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o init/built-in.o init/main.o init/version.o init/mounts.o init/_vmm.o init/vmm.o init/ld.o init/initramfs.o init/calibrate.o init/init_task.o ; scripts/mod/modpost init/built-in.o

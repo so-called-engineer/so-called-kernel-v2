@@ -1,0 +1,8 @@
+kernel/sound/soc/codecs/snd-soc-arizona.ko
+kernel/sound/soc/codecs/snd-soc-florida.ko
+kernel/sound/soc/codecs/snd-soc-clearwater.ko
+kernel/sound/soc/codecs/snd-soc-wm-adsp.ko
+kernel/sound/soc/codecs/snd-soc-dummy.ko
+kernel/sound/soc/codecs/snd-soc-max98505.ko
+kernel/sound/soc/codecs/snd-soc-maxim-dsm.ko
+kernel/sound/soc/codecs/snd-soc-maxim-dsm-cal.ko

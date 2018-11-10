@@ -1,0 +1,1 @@
+cmd_arch/arm64/plat-samsung/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o arch/arm64/plat-samsung/built-in.o arch/arm64/plat-samsung/init.o arch/arm64/plat-samsung/cpu.o ; scripts/mod/modpost arch/arm64/plat-samsung/built-in.o

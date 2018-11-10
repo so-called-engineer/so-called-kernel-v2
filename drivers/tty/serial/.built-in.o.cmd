@@ -1,0 +1,1 @@
+cmd_drivers/tty/serial/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/tty/serial/built-in.o drivers/tty/serial/serial_core.o drivers/tty/serial/samsung.o ; scripts/mod/modpost drivers/tty/serial/built-in.o

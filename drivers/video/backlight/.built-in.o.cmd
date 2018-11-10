@@ -1,0 +1,1 @@
+cmd_drivers/video/backlight/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/video/backlight/built-in.o drivers/video/backlight/lcd.o drivers/video/backlight/backlight.o drivers/video/backlight/generic_bl.o ; scripts/mod/modpost drivers/video/backlight/built-in.o

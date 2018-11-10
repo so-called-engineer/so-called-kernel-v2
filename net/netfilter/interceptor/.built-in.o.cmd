@@ -1,0 +1,1 @@
+cmd_net/netfilter/interceptor/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o net/netfilter/interceptor/built-in.o net/netfilter/interceptor/vpnclient.o ; scripts/mod/modpost net/netfilter/interceptor/built-in.o

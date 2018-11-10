@@ -1,0 +1,1 @@
+cmd_drivers/iio/common/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/iio/common/built-in.o drivers/iio/common/hid-sensors/built-in.o drivers/iio/common/st_sensors/built-in.o ; scripts/mod/modpost drivers/iio/common/built-in.o

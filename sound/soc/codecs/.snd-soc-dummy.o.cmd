@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/snd-soc-dummy.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o sound/soc/codecs/snd-soc-dummy.o sound/soc/codecs/dummy_codec.o ; scripts/mod/modpost sound/soc/codecs/snd-soc-dummy.o

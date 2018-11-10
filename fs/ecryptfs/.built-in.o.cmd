@@ -1,0 +1,1 @@
+cmd_fs/ecryptfs/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o fs/ecryptfs/built-in.o fs/ecryptfs/ecryptfs.o fs/ecryptfs/ecryptfs_dek.o fs/ecryptfs/mm.o fs/ecryptfs/ecryptfs_sdp_chamber.o ; scripts/mod/modpost fs/ecryptfs/built-in.o

@@ -1,0 +1,1 @@
+cmd_sound/soc/samsung/snd-soc-i2s.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o sound/soc/samsung/snd-soc-i2s.o sound/soc/samsung/i2s.o ; scripts/mod/modpost sound/soc/samsung/snd-soc-i2s.o

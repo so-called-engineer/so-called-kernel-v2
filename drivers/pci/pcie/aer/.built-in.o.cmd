@@ -1,0 +1,1 @@
+cmd_drivers/pci/pcie/aer/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/pci/pcie/aer/built-in.o drivers/pci/pcie/aer/aerdriver.o ; scripts/mod/modpost drivers/pci/pcie/aer/built-in.o

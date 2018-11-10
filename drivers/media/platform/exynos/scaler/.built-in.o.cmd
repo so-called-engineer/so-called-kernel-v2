@@ -1,0 +1,1 @@
+cmd_drivers/media/platform/exynos/scaler/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/media/platform/exynos/scaler/built-in.o drivers/media/platform/exynos/scaler/scaler.o ; scripts/mod/modpost drivers/media/platform/exynos/scaler/built-in.o

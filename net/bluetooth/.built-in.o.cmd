@@ -1,0 +1,1 @@
+cmd_net/bluetooth/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o net/bluetooth/built-in.o net/bluetooth/bluetooth.o net/bluetooth/hidp/built-in.o ; scripts/mod/modpost net/bluetooth/built-in.o

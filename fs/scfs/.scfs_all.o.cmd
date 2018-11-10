@@ -1,0 +1,1 @@
+cmd_fs/scfs/scfs_all.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o fs/scfs/scfs_all.o fs/scfs/scfs.o fs/scfs/super.o fs/scfs/file.o fs/scfs/inode.o fs/scfs/mmap.o fs/scfs/compress.o ; scripts/mod/modpost fs/scfs/scfs_all.o

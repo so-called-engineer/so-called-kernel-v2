@@ -1,0 +1,1 @@
+cmd_sound/soc/samsung/snd-soc-eax-dai.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o sound/soc/samsung/snd-soc-eax-dai.o sound/soc/samsung/eax-dai.o ; scripts/mod/modpost sound/soc/samsung/snd-soc-eax-dai.o

@@ -1,0 +1,1 @@
+cmd_sound/soc/codecs/snd-soc-maxim-dsm-cal.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o sound/soc/codecs/snd-soc-maxim-dsm-cal.o sound/soc/codecs/maxim_dsm_cal.o sound/soc/codecs/maxim_dsm_power.o ; scripts/mod/modpost sound/soc/codecs/snd-soc-maxim-dsm-cal.o

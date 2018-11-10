@@ -1,0 +1,1 @@
+cmd_crypto/crypto_algapi.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o crypto/crypto_algapi.o crypto/algapi.o crypto/scatterwalk.o crypto/proc.o ; scripts/mod/modpost crypto/crypto_algapi.o

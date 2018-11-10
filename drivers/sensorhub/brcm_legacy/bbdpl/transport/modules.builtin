@@ -1,0 +1,4 @@
+kernel/drivers/sensorhub/brcm_legacy/bbdpl/transport/bbd_bridge_c.ko
+kernel/drivers/sensorhub/brcm_legacy/bbdpl/transport/bbd_engine.ko
+kernel/drivers/sensorhub/brcm_legacy/bbdpl/transport/bbd_packet_layer_c.ko
+kernel/drivers/sensorhub/brcm_legacy/bbdpl/transport/transport_layer_c.ko

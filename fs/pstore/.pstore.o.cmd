@@ -1,0 +1,1 @@
+cmd_fs/pstore/pstore.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o fs/pstore/pstore.o fs/pstore/inode.o fs/pstore/platform.o ; scripts/mod/modpost fs/pstore/pstore.o
