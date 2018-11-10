@@ -170,11 +170,11 @@ int exynos_mfc_sysmmu_fault_handler(struct iommu_domain *iodmn, struct device *d
 #define COL_FRAME_RATE		0
 #define COL_FRAME_INTERVAL	1
 static unsigned long framerate_table[][2] = {
-	{ 30000, 25000 },
-	{ 60000, 12500 },
-	{ 120000, 6940 },
-	{ 180000, 4860 },
-	{ 240000, 0 },
+       { 30000, 25000 },
+       { 60000, 12500 },
+       { 120000, 6940 },
+       { 180000, 4860 },
+       { 240000, 0 },
 };
 
 static inline unsigned long timeval_diff(struct timeval *to,
@@ -281,7 +281,7 @@ int get_framerate_by_timestamp(struct s5p_mfc_ctx *ctx, struct v4l2_buffer *buf)
 
 	if (list_empty(&ctx->ts_list)) {
 		dec_add_timestamp(ctx, buf, &ctx->ts_list);
-		return get_framerate_by_interval(0);
+        return get_framerate_by_interval(0);		
 	} else {
 		found = 0;
 		list_for_each_entry_reverse(temp_ts, &ctx->ts_list, list) {
@@ -2567,7 +2567,6 @@ static int s5p_mfc_release(struct file *file)
 			goto err_release;
 		}
 
-		s5p_mfc_clean_ctx_int_flags(ctx);
 		ctx->state = MFCINST_RETURN_INST;
 		spin_lock_irq(&dev->condlock);
 		set_bit(ctx->num, &dev->ctx_work_bits);
@@ -2578,16 +2577,60 @@ static int s5p_mfc_release(struct file *file)
 
 		/* Wait until instance is returned or timeout occured */
 		if (s5p_mfc_wait_for_done_ctx(ctx,
-				S5P_FIMV_R2H_CMD_CLOSE_INSTANCE_RET) == 1) {
-			mfc_err_ctx("It was expired to wait for a CLOSE_INSTANCE\n");
+				S5P_FIMV_R2H_CMD_CLOSE_INSTANCE_RET)) {
+			dev->curr_ctx_drm = ctx->is_drm;
+			set_bit(ctx->num, &dev->hw_lock);
+			s5p_mfc_clock_on(dev);
+			s5p_mfc_close_inst(ctx);
 			if (s5p_mfc_wait_for_done_ctx(ctx,
-					S5P_FIMV_R2H_CMD_CLOSE_INSTANCE_RET)) {
-				mfc_err_ctx("It was once more expired. stop H/W\n");
-				s5p_mfc_check_hw_state(dev);
-				/* Stop */
-				BUG();
+				S5P_FIMV_R2H_CMD_CLOSE_INSTANCE_RET)) {
+				mfc_err_ctx("Abnormal h/w state.\n");
+
+				/* cleanup for the next open */
+				if (dev->curr_ctx == ctx->num)
+					clear_bit(ctx->num, &dev->hw_lock);
+				if (ctx->is_drm)
+					dev->num_drm_inst--;
+				dev->num_inst--;
+
+				mfc_info_dev("Failed to release MFC inst[%d:%d]\n",
+						dev->num_drm_inst, dev->num_inst);
+
+#ifdef CONFIG_EXYNOS_CONTENT_PATH_PROTECTION
+				if (ctx->is_drm && dev->num_drm_inst == 0) {
+					ret = s5p_mfc_secmem_isolate_and_protect(0);
+					if (ret)
+						mfc_err("Failed to unprotect secure memory\n");
+				}
+#endif
+				if (dev->num_inst == 0) {
+					s5p_mfc_deinit_hw(dev);
+					del_timer_sync(&dev->watchdog_timer);
+
+					flush_workqueue(dev->sched_wq);
+
+					s5p_mfc_clock_off(dev);
+					mfc_debug(2, "power off\n");
+					s5p_mfc_power_off(dev);
+
+					s5p_mfc_release_dev_context_buffer(dev);
+					dev->drm_fw_status = 0;
+
+#ifdef CONFIG_EXYNOS_CONTENT_PATH_PROTECTION
+					if (dev->is_support_smc) {
+						s5p_mfc_release_sec_pgtable(dev);
+						dev->is_support_smc = 0;
+					}
+#endif
+				} else {
+					s5p_mfc_clock_off(dev);
+				}
+
+				ret = -EIO;
+				goto err_release;
 			}
 		}
+
 		ctx->inst_no = MFC_NO_INSTANCE_SET;
 	}
 	/* hardware locking scheme */

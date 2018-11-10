@@ -65,14 +65,14 @@ export KCONFIG_NOTIMESTAMP=true
 export ARCH=arm64;
 export SUB_ARCH=arm64;
 
-# G920I
-if [ "$TARGET" = "G920I" ] ; then
-	export KERNEL_CONFIG="zerolte_02_defconfig";
+# G920F
+if [ "$TARGET" = "G920F" ] ; then
+	export KERNEL_CONFIG="exynos7420-zerolte_defconfig";
 fi;
 
-# G925I
-if [ "$TARGET" = "G925I" ] ; then
-	export KERNEL_CONFIG="zerolte_02_defconfig";
+# G925F
+if [ "$TARGET" = "G925F" ] ; then
+	export KERNEL_CONFIG="exynos7420-zerolte_defconfig";
 fi;
 
 # build script

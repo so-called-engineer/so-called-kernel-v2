@@ -7,14 +7,6 @@ NAME = TOSSUG Baby Fish
 #TOOLCHAIN_DIR = $(CURDIR)/toolchain/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 TOOLCHAIN_DIR =/home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
-ifdef CONFIG_WITH_CCACHE
-ccache := ccache
-endif
-
-ifdef CONFIG_WITH_GRAPHITE
-GRAPHITE = -fgraphite-identity -floop-parallelize-all -ftree-loop-linear -floop-interchange -floop-strip-mine -floop-block -floop-flatten -floop-nest-optimize -fgraphite
-endif
-
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
 # More info can be located in ./README
@@ -203,8 +195,11 @@ SUBARCH := $(shell uname -m | sed -e s/i.86/x86/ -e s/x86_64/x86/ \
 # "make" in the configured kernel build directory always uses that.
 # Default value for CROSS_COMPILE is not to prefix executables
 # Note: Some architectures assign CROSS_COMPILE in their arch/*/Makefile
-ARCH		?= $(SUBARCH)
-CROSS_COMPILE	?= $(CONFIG_CROSS_COMPILE:"%"=%)
+#ARCH		?= $(SUBARCH)
+#CROSS_COMPILE	?= $(CONFIG_CROSS_COMPILE:"%"=%)
+ARCH            ?= arm64
+CROSS_COMPILE   ?= ../PLATFORM/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+#CROSS_COMPILE   ?= /opt/toolchains/aarch64-linux-android-4.9/bin/aarch64-linux-android-
 
 # Architecture as present in compile.h
 UTS_MACHINE 	:= $(ARCH)
@@ -250,21 +245,9 @@ CONFIG_SHELL := $(shell if [ -x "$$BASH" ]; then echo $$BASH; \
 	  else if [ -x /bin/bash ]; then echo /bin/bash; \
 	  else echo sh; fi ; fi)
 
-ifdef CONFIG_WITH_CCACHE
-HOSTCC       = $(CCACHE) gcc
-HOSTCXX      = $(CCACHE) g++
-else
 HOSTCC       = gcc
 HOSTCXX      = g++
-endif
-ifdef CONFIG_WITH_GRAPHITE
-HOSTCFLAGS   = $(GRAPHITE) -Wall -Wmissing-prototypes -Wstrict-prototypes -Ofast -fomit-frame-pointer -std=gnu89 -floop-nest-optimize
-HOSTCXXFLAGS = $(GRAPHITE) -Ofast
-else
-HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -Ofast -fomit-frame-pointer -std=gnu89 -floop-nest-optimize
-HOSTCXXFLAGS = -Ofast
-endif
-HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer -std=gnu89
+HOSTCFLAGS   = -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer
 HOSTCXXFLAGS = -O2
 
 # Decide whether to build built-in, modular, or both.
@@ -349,24 +332,8 @@ include $(srctree)/scripts/Kbuild.include
 
 AS		= $(CROSS_COMPILE)as
 LD		= $(CROSS_COMPILE)ld
-ifdef CONFIG_WITH_CCACHE
-	ifdef CONFIG_WITH_GRAPHITE
-		CC		= $(CCACHE) $(GRAPHITE) $(CROSS_COMPILE)gcc
-	else
-		CC		= $(CCACHE) $(CROSS_COMPILE)gcc	
-	endif
-else
-	ifdef CONFIG_WITH_GRAPHITE
-		CC		= $(GRAPHITE) $(CROSS_COMPILE)gcc
-	else
-		CC		= $(CROSS_COMPILE)gcc
-	endif
-endif
-ifdef CONFIG_WITH_GRAPHITE
-CPP		= $(GRAPHITE) $(CC) -E
-else
+CC		= $(CROSS_COMPILE)gcc
 CPP		= $(CC) -E
-endif
 AR		= $(CROSS_COMPILE)ar
 NM		= $(CROSS_COMPILE)nm
 STRIP		= $(CROSS_COMPILE)strip
@@ -391,19 +358,11 @@ endif
 
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
 		  -Wbitwise -Wno-return-void $(CF)
-ifdef CONFIG_WITH_GRAPHITE
-CFLAGS_MODULE   = $(GRAPHITE) 
-AFLAGS_MODULE   = $(GRAPHITE) 
-LDFLAGS_MODULE  = $(GRAPHITE) 
-CFLAGS_KERNEL	= $(GRAPHITE) -fsingle-precision-constant
-AFLAGS_KERNEL	= $(GRAPHITE) 
-else
-CFLAGS_MODULE   = 
-AFLAGS_MODULE   = 
-LDFLAGS_MODULE  = 
-CFLAGS_KERNEL	= -fsingle-precision-constant
-AFLAGS_KERNEL	= 
-endif
+CFLAGS_MODULE   =
+AFLAGS_MODULE   =
+LDFLAGS_MODULE  =
+CFLAGS_KERNEL	=
+AFLAGS_KERNEL	=
 CFLAGS_GCOV	= -fprofile-arcs -ftest-coverage
 
 
@@ -426,35 +385,12 @@ LINUXINCLUDE    := \
 
 KBUILD_CPPFLAGS := -D__KERNEL__
 
-ifdef CONFIG_WITH_GRAPHITE
-KBUILD_CFLAGS   := -DNDEBUG $(GRAPHITE) -w -Wstrict-prototypes -Wno-trigraphs \
-		   -fno-strict-aliasing -finline-functions -fno-common \
-		   -Werror-implicit-function-declaration -fno-pic \
-		   -Wno-format-security -ffast-math \
+KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
+		   -fno-strict-aliasing -fno-common \
+		   -Werror-implicit-function-declaration \
+		   -Wno-format-security \
 		   -fno-delete-null-pointer-checks \
-		   -fdiagnostics-show-option \
-		   -pipe  -funswitch-loops -fpredictive-commoning -fgcse-after-reload \
-		   -ftree-loop-distribution -ftree-loop-if-convert -fivopts -fipa-pta -fira-hoist-pressure \
-		   -fmodulo-sched -fmodulo-sched-allow-regmoves \
-		   -fbranch-target-load-optimize -fsingle-precision-constant \
-		   -Werror -Wno-error=unused-variable -Wno-error=unused-function \
-		   -std=gnu89 -Wno-discarded-array-qualifiers -Wno-logical-not-parentheses -Wno-array-bounds -Wno-switch -Wno-unused-variable \
-		   -march=armv8-a+crc -mtune=cortex-a57.cortex-a53
-else
-KBUILD_CFLAGS   := -DNDEBUG -w -Wstrict-prototypes -Wno-trigraphs \
-		   -fno-strict-aliasing -finline-functions -fno-common \
-		   -Werror-implicit-function-declaration -fno-pic \
-		   -Wno-format-security -ffast-math \
-		   -fno-delete-null-pointer-checks \
-		   -fdiagnostics-show-option \
-		   -pipe  -funswitch-loops -fpredictive-commoning -fgcse-after-reload \
-		   -ftree-loop-distribution -ftree-loop-if-convert -fivopts -fipa-pta -fira-hoist-pressure \
-		   -fmodulo-sched -fmodulo-sched-allow-regmoves \
-		   -fbranch-target-load-optimize -fsingle-precision-constant \
-		   -Werror -Wno-error=unused-variable -Wno-error=unused-function \
-		   -std=gnu89 -Wno-discarded-array-qualifiers -Wno-logical-not-parentheses -Wno-array-bounds -Wno-switch -Wno-unused-variable \
-		   -march=armv8-a+crc -mtune=cortex-a57.cortex-a53
-endif
+		   -fdiagnostics-show-option -Werror
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS   := -D__ASSEMBLY__
@@ -463,7 +399,7 @@ KBUILD_CFLAGS_MODULE  := -DMODULE
 KBUILD_LDFLAGS_MODULE := -T $(srctree)/scripts/module-common.lds
 
 # Read KERNELRELEASE from include/config/kernel.release (if it exists)
-KERNELRELEASE = $(VERSION)$(if $(PATCHLEVEL),.$(PATCHLEVEL)$(if $(SUBLEVEL),.$(SUBLEVEL)))$(EXTRAVERSION)$(CONFIG_LOCALVERSION)
+KERNELRELEASE = $(shell cat include/config/kernel.release 2> /dev/null)
 KERNELVERSION = $(VERSION)$(if $(PATCHLEVEL),.$(PATCHLEVEL)$(if $(SUBLEVEL),.$(SUBLEVEL)))$(EXTRAVERSION)
 
 export VERSION PATCHLEVEL SUBLEVEL KERNELRELEASE KERNELVERSION
@@ -522,6 +458,29 @@ asm-generic:
 	$(Q)$(MAKE) -f $(srctree)/scripts/Makefile.asm-generic \
 	            src=uapi/asm obj=arch/$(SRCARCH)/include/generated/uapi/asm
 
+ifneq ($(PLATFORM_VERSION), )
+PLATFORM_VERSION_NUMBER=$(shell $(CONFIG_SHELL) $(srctree)/scripts/android-version.sh $(PLATFORM_VERSION))
+MAJOR_VERSION=$(shell $(CONFIG_SHELL) $(srctree)/scripts/android-major-version.sh $(PLATFORM_VERSION))
+export ANDROID_VERSION=$(PLATFORM_VERSION_NUMBER)
+export ANDROID_MAJOR_VERSION=$(MAJOR_VERSION)
+KBUILD_CFLAGS += -DANDROID_VERSION=$(PLATFORM_VERSION_NUMBER)
+KBUILD_CFLAGS += -DANDROID_MAJOR_VERSION=$(MAJOR_VERSION)
+# Example
+SELINUX_DIR=$(shell $(CONFIG_SHELL) $(srctree)/scripts/find_matching_major.sh "$(srctree)" "security/selinux" "$(ANDROID_MAJOR_VERSION)")
+SDCARDFS_DIR=$(shell $(CONFIG_SHELL) $(srctree)/scripts/find_matching_version.sh "$(srctree)" "fs/sdcardfs" "$(ANDROID_VERSION)")
+else
+export ANDROID_VERSION=990000
+KBUILD_CFLAGS += -DANDROID_VERSION=990000
+endif
+PHONY += replace_dirs
+replace_dirs:
+ifneq ($(PLATFORM_VERSION), )
+# Example
+	@echo "replace selinux from $(SELINUX_DIR)"
+	$(Q)$(CONFIG_SHELL) $(srctree)/scripts/replace_dir.sh "$(srctree)" "security/selinux" "$(SELINUX_DIR)"
+	@echo "replace sdcardfs from $(SDCARDFS_DIR)"
+	$(Q)$(CONFIG_SHELL) $(srctree)/scripts/replace_dir.sh "$(srctree)" "fs/sdcardfs" "$(SDCARDFS_DIR)"
+endif
 # To make sure we do not include .config for any of the *config targets
 # catch them early, and hand them over to scripts/kconfig/Makefile
 # It is allowed to specify more targets when calling make, including
@@ -576,11 +535,11 @@ ifeq ($(config-targets),1)
 include $(srctree)/arch/$(SRCARCH)/Makefile
 export KBUILD_DEFCONFIG KBUILD_KCONFIG
 
-config: scripts_basic outputmakefile FORCE
+config: scripts_basic outputmakefile replace_dirs FORCE
 	$(Q)mkdir -p include/linux include/config
 	$(Q)$(MAKE) $(build)=scripts/kconfig $@
 
-%config: scripts_basic outputmakefile FORCE
+%config: scripts_basic outputmakefile replace_dirs FORCE
 	$(Q)mkdir -p include/linux include/config
 	$(Q)$(MAKE) $(build)=scripts/kconfig $@
 
@@ -654,13 +613,10 @@ all: vmlinux
 ifdef CONFIG_CC_OPTIMIZE_FOR_SIZE
 KBUILD_CFLAGS	+= -Os $(call cc-disable-warning,maybe-uninitialized,)
 else
-KBUILD_CFLAGS	+= -Ofast $(call cc-disable-warning,maybe-uninitialized,)
+KBUILD_CFLAGS	+= -O2
 endif
 
 include $(srctree)/arch/$(SRCARCH)/Makefile
-
-# Tell gcc to never replace conditional load with a non-conditional one
-KBUILD_CFLAGS	+= $(call cc-option,--param=allow-store-data-races=0)
 
 ifdef CONFIG_READABLE_ASM
 # Disable optimizations that make assembler listings hard to read.
@@ -875,7 +831,7 @@ quiet_cmd_link-vmlinux = LINK    $@
 
 # Include targets which we want to
 # execute if the rest of the kernel build went well.
-vmlinux: scripts/link-vmlinux.sh $(vmlinux-deps) FORCE
+vmlinux: scripts/link-vmlinux.sh print_info $(vmlinux-deps) FORCE
 ifdef CONFIG_HEADERS_CHECK
 	$(Q)$(MAKE) -f $(srctree)/Makefile headers_check
 endif
@@ -886,6 +842,10 @@ ifdef CONFIG_BUILD_DOCSRC
 	$(Q)$(MAKE) $(build)=Documentation
 endif
 	+$(call if_changed,link-vmlinux)
+
+PHONY += print_info
+print_info:
+	@echo "INFO: CC is $(CC)"
 
 # The actual objects are generated when descending, 
 # make sure no implicit rule kicks in

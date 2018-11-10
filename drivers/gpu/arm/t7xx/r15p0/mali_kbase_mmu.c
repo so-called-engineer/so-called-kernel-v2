@@ -45,10 +45,6 @@
 
 #define KBASE_MMU_PAGE_ENTRIES 512
 
-/* MALI_SEC_INTEGRATION */
-#include "./platform/exynos/gpu_control.h"
-extern struct kbase_device *pkbdev;
-
 /**
  * kbase_mmu_flush_invalidate() - Flush and invalidate the GPU caches.
  * @kctx: The KBase context.
@@ -834,14 +830,9 @@ int kbase_mmu_insert_pages(struct kbase_context *kctx, u64 vpfn,
 				  unsigned long flags)
 {
 	int err;
-	/* MALI_SEC_INTEGRATION */
-	struct exynos_context *platform = (struct exynos_context *)pkbdev->platform_context;
 
 	err = kbase_mmu_insert_pages_no_flush(kctx, vpfn, phys, nr, flags);
-  /* MALI_SEC_INTEGRATION */
-	if (gpu_is_power_on() && platform->dvs_is_enabled == false)
-		kbase_mmu_flush_invalidate(kctx, vpfn, nr, false);
-
+	kbase_mmu_flush_invalidate(kctx, vpfn, nr, false);
 	return err;
 }
 

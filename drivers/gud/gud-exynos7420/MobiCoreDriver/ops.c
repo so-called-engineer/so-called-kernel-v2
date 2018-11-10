@@ -180,7 +180,6 @@ int mc_fastcall_init(struct mc_context *context)
 void mc_fastcall_destroy(void) {};
 #endif
 
-/* ExySp */
 #define TBASE_SMC_HISTORY 1
 #if TBASE_SMC_HISTORY
 struct smc_log_entry {
@@ -190,11 +189,10 @@ struct smc_log_entry {
 };
 
 static DEFINE_SPINLOCK(smc_log_lock);
-#define SMC_LOG_SIZE 3072
+#define SMC_LOG_SIZE 256
 struct smc_log_entry smc_history[SMC_LOG_SIZE];
 static uint32_t smc_log_idx;
 #endif
-/* ExySp end */
 
 #ifdef MC_FASTCALL_WORKER_THREAD
 static void fastcall_work_func(struct kthread_work *work)
@@ -235,7 +233,6 @@ static void fastcall_work_func(struct work_struct *work)
 	}
 #endif
 
-/* ExySp */
 #if TBASE_SMC_HISTORY
 	do {
 		unsigned long flags;
@@ -249,7 +246,6 @@ static void fastcall_work_func(struct work_struct *work)
 		spin_unlock_irqrestore(&smc_log_lock, flags);
 	} while (0);
 #endif
-/* ExySp end */
 
 	smc(fc_work->data);
 #ifdef TBASE_CORE_SWITCHER

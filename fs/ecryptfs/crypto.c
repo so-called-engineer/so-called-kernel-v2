@@ -72,7 +72,6 @@ static void crypto_cc_rng_get_bytes(u8 *data, unsigned int len)
 	struct crypto_rng *rng = NULL;
 	char *seed = NULL;
 	int read_bytes = 0;
-	int get_bytes = 0;
 	int trialcount = 10;
 	int ret = 0;
 	struct file *filp = NULL;
@@ -95,8 +94,7 @@ static void crypto_cc_rng_get_bytes(u8 *data, unsigned int len)
 	memset((void *)seed, 0, SEED_LEN);
 
 	while (trialcount > 0) {
-                if ((get_bytes = (int)filp->f_op->read(filp, &(seed[read_bytes]), SEED_LEN-read_bytes, &filp->f_pos)) > 0)
-			read_bytes += get_bytes;
+		read_bytes += filp->f_op->read(filp, &(seed[read_bytes]), SEED_LEN-read_bytes, &filp->f_pos);
 		if (read_bytes != SEED_LEN)
 			trialcount--;
 		else

@@ -111,7 +111,6 @@ enum base_hw_issue {
 	BASE_HW_ISSUE_TMIX_8463,
 	BASE_HW_ISSUE_TMIX_8456,
 	GPUCORE_1619,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -181,7 +180,6 @@ static const enum base_hw_issue base_hw_issues_t60x_r0p0_15dev0[] = {
 	BASE_HW_ISSUE_T76X_1909,
 	BASE_HW_ISSUE_T76X_3964,
 	GPUCORE_1619,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -221,7 +219,6 @@ static const enum base_hw_issue base_hw_issues_t60x_r0p0_eac[] = {
 	BASE_HW_ISSUE_11054,
 	BASE_HW_ISSUE_T76X_1909,
 	BASE_HW_ISSUE_T76X_3964,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -259,7 +256,6 @@ static const enum base_hw_issue base_hw_issues_t60x_r0p1[] = {
 	BASE_HW_ISSUE_T76X_1909,
 	BASE_HW_ISSUE_T76X_1963,
 	BASE_HW_ISSUE_T76X_3964,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -293,7 +289,6 @@ static const enum base_hw_issue base_hw_issues_t62x_r0p1[] = {
 	BASE_HW_ISSUE_11054,
 	BASE_HW_ISSUE_T76X_1909,
 	BASE_HW_ISSUE_T76X_1963,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -318,7 +313,6 @@ static const enum base_hw_issue base_hw_issues_t62x_r1p0[] = {
 	BASE_HW_ISSUE_T76X_1909,
 	BASE_HW_ISSUE_T76X_1963,
 	BASE_HW_ISSUE_T76X_3964,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -340,7 +334,6 @@ static const enum base_hw_issue base_hw_issues_t62x_r1p1[] = {
 	BASE_HW_ISSUE_11054,
 	BASE_HW_ISSUE_T76X_1909,
 	BASE_HW_ISSUE_T76X_1963,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -368,7 +361,6 @@ static const enum base_hw_issue base_hw_issues_t76x_r0p0[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -396,7 +388,6 @@ static const enum base_hw_issue base_hw_issues_t76x_r0p1[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -422,7 +413,6 @@ static const enum base_hw_issue base_hw_issues_t76x_r0p1_50rel0[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -450,7 +440,6 @@ static const enum base_hw_issue base_hw_issues_t76x_r0p2[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -476,7 +465,6 @@ static const enum base_hw_issue base_hw_issues_t76x_r0p3[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -499,7 +487,6 @@ static const enum base_hw_issue base_hw_issues_t76x_r1p0[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -519,7 +506,6 @@ static const enum base_hw_issue base_hw_issues_t72x_r0p0[] = {
 	BASE_HW_ISSUE_T76X_1909,
 	BASE_HW_ISSUE_T76X_1963,
 	BASE_HW_ISSUE_T76X_3964,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -539,7 +525,6 @@ static const enum base_hw_issue base_hw_issues_t72x_r1p0[] = {
 	BASE_HW_ISSUE_T76X_1909,
 	BASE_HW_ISSUE_T76X_1963,
 	BASE_HW_ISSUE_T76X_3964,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -559,7 +544,6 @@ static const enum base_hw_issue base_hw_issues_t72x_r1p1[] = {
 	BASE_HW_ISSUE_T76X_1909,
 	BASE_HW_ISSUE_T76X_1963,
 	BASE_HW_ISSUE_T76X_3964,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -654,7 +638,6 @@ static const enum base_hw_issue base_hw_issues_tFRx_r0p1[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -675,7 +658,6 @@ static const enum base_hw_issue base_hw_issues_tFRx_r0p2[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -694,7 +676,6 @@ static const enum base_hw_issue base_hw_issues_tFRx_r1p0[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -713,7 +694,6 @@ static const enum base_hw_issue base_hw_issues_tFRx_r2p0[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -749,7 +729,6 @@ static const enum base_hw_issue base_hw_issues_t86x_r0p2[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -768,7 +747,6 @@ static const enum base_hw_issue base_hw_issues_t86x_r1p0[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -787,7 +765,6 @@ static const enum base_hw_issue base_hw_issues_t86x_r2p0[] = {
 	BASE_HW_ISSUE_T76X_3966,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -821,7 +798,6 @@ static const enum base_hw_issue base_hw_issues_t83x_r0p1[] = {
 	BASE_HW_ISSUE_T76X_3960,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -840,7 +816,6 @@ static const enum base_hw_issue base_hw_issues_t83x_r1p0[] = {
 	BASE_HW_ISSUE_T76X_3960,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -876,7 +851,6 @@ static const enum base_hw_issue base_hw_issues_t82x_r0p0[] = {
 	BASE_HW_ISSUE_T76X_3964,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -896,7 +870,6 @@ static const enum base_hw_issue base_hw_issues_t82x_r0p1[] = {
 	BASE_HW_ISSUE_T76X_3960,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
@@ -915,7 +888,6 @@ static const enum base_hw_issue base_hw_issues_t82x_r1p0[] = {
 	BASE_HW_ISSUE_T76X_3960,
 	BASE_HW_ISSUE_T76X_3979,
 	BASE_HW_ISSUE_TMIX_7891,
-	BASE_HW_ISSUE_TMIX_8438,
 	BASE_HW_ISSUE_END
 };
 
