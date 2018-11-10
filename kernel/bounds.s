@@ -4,11 +4,11 @@
 //	compiled by GNU C version 4.8, GMP version 5.0.5, MPFR version 3.1.1, MPC version 1.0.1
 // GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 // options passed:  -nostdinc
-// -I /home/so-called-engineer/kernel/arch/arm64/include
+// -I /home/so-called-engineer/Kernel/arch/arm64/include
 // -I arch/arm64/include/generated -I include
-// -I /home/so-called-engineer/kernel/arch/arm64/include/uapi
+// -I /home/so-called-engineer/Kernel/arch/arm64/include/uapi
 // -I arch/arm64/include/generated/uapi
-// -I /home/so-called-engineer/kernel/include/uapi
+// -I /home/so-called-engineer/Kernel/include/uapi
 // -I include/generated/uapi -I arch/arm64/mach-exynos/include
 // -I arch/arm64/plat-samsung/include
 // -I drivers/gud/gud-exynos7420/MobiCoreKernelApi/include/
@@ -17,7 +17,7 @@
 // -D KBUILD_STR(s)=#s -D KBUILD_BASENAME=KBUILD_STR(bounds)
 // -D KBUILD_MODNAME=KBUILD_STR(bounds)
 // -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include
-// -include /home/so-called-engineer/kernel/include/linux/kconfig.h
+// -include /home/so-called-engineer/Kernel/include/linux/kconfig.h
 // -MD kernel/.bounds.s.d kernel/bounds.c -mbionic -mlittle-endian
 // -mgeneral-regs-only -mabi=lp64 -auxbase-strip kernel/bounds.s -g -Os
 // -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs
@@ -538,8 +538,6 @@ foo:
 	.string	"ZONE_NORMAL"
 .LASF29:
 	.string	"PG_mappedtodisk"
-.LASF55:
-	.string	"/home/so-called-engineer/kernel"
 .LASF12:
 	.string	"PG_locked"
 .LASF16:
@@ -636,5 +634,7 @@ foo:
 	.string	"PG_mlocked"
 .LASF41:
 	.string	"PG_slob_free"
+.LASF55:
+	.string	"/home/so-called-engineer/Kernel"
 	.ident	"GCC: (GNU) 4.9.x 20150123 (prerelease)"
 	.section	.note.GNU-stack,"",%progbits

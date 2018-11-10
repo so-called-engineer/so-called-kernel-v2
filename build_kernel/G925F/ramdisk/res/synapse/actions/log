@@ -282,16 +282,6 @@ case $1 in
 		$BB chmod 755 $LOGS;
 
 		logcat -d > $saved;
-TIMESTAMP=$(date +%Y-%m-%d.%H.%M.%S);
-LOGS=/sdcard/Sickness/Logs;
-
-[ ! -d "$LOGS" ] && mkdir -p "$LOGS";
-chmod 755 $LOGS
-
-case $1 in
-	logcat)
-		saved="$LOGS/logcat-$TIMESTAMP.txt";
-		logcat -d > "$saved";
 	;;
 
 	dmesg)
@@ -300,7 +290,6 @@ case $1 in
 		$BB chmod 755 $LOGS;
 
 		$BB dmesg > $saved;
-		dmesg > "$saved";
 	;;
 
 	kmsg)
@@ -313,9 +302,6 @@ case $1 in
 			$BB cp -f $kmsg $saved;
 		else
 			$BB echo "$kmsg not found.";
-			cp -f $kmsg "$saved";
-		else
-			echo "$kmsg not found.";
 		fi;
 	;;
 esac;

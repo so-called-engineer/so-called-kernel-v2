@@ -1,4 +1,4 @@
-cmd_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-gcc -Wp,-MD,arch/arm64/mach-exynos/.setup-exynos5-mipiphy.o.d  -nostdinc -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include -I/home/so-called-engineer/kernel/arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I/home/so-called-engineer/kernel/arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I/home/so-called-engineer/kernel/include/uapi -Iinclude/generated/uapi -include /home/so-called-engineer/kernel/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Iarch/arm64/mach-exynos/include -Iarch/arm64/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -fdiagnostics-show-option -Werror -DANDROID_VERSION=990000 -Os -Wno-maybe-uninitialized -mgeneral-regs-only -fno-pic -Wframe-larger-than=2064 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DTIMA_LKM_AUTH_ENABLED -Idrivers/gud/gud-exynos7420/MobiCoreKernelApi/include/    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(setup_exynos5_mipiphy)"  -D"KBUILD_MODNAME=KBUILD_STR(setup_exynos5_mipiphy)" -c -o arch/arm64/mach-exynos/setup-exynos5-mipiphy.o arch/arm64/mach-exynos/setup-exynos5-mipiphy.c
+cmd_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-gcc -Wp,-MD,arch/arm64/mach-exynos/.setup-exynos5-mipiphy.o.d  -nostdinc -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include -I/home/so-called-engineer/Kernel/arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I/home/so-called-engineer/Kernel/arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I/home/so-called-engineer/Kernel/include/uapi -Iinclude/generated/uapi -include /home/so-called-engineer/Kernel/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Iarch/arm64/mach-exynos/include -Iarch/arm64/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -fdiagnostics-show-option -Werror -DANDROID_VERSION=990000 -Os -Wno-maybe-uninitialized -mgeneral-regs-only -fno-pic -Wframe-larger-than=2064 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DTIMA_LKM_AUTH_ENABLED -Idrivers/gud/gud-exynos7420/MobiCoreKernelApi/include/    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(setup_exynos5_mipiphy)"  -D"KBUILD_MODNAME=KBUILD_STR(setup_exynos5_mipiphy)" -c -o arch/arm64/mach-exynos/setup-exynos5-mipiphy.o arch/arm64/mach-exynos/setup-exynos5-mipiphy.c
 
 source_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := arch/arm64/mach-exynos/setup-exynos5-mipiphy.c
 
@@ -32,7 +32,7 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
   include/linux/compiler-gcc4.h \
     $(wildcard include/config/arch/use/builtin/bswap.h) \
   include/linux/stringify.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/linkage.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/linkage.h \
   include/linux/stddef.h \
   include/uapi/linux/stddef.h \
   include/linux/types.h \
@@ -42,18 +42,18 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
     $(wildcard include/config/64bit.h) \
   include/uapi/linux/types.h \
   arch/arm64/include/generated/asm/types.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/types.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/types.h \
   include/asm-generic/int-ll64.h \
   include/uapi/asm-generic/int-ll64.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/bitsperlong.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/uapi/asm-generic/bitsperlong.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/posix_types.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/posix_types.h \
   arch/arm64/include/generated/asm/posix_types.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/posix_types.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/posix_types.h \
   include/linux/bitops.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/bitops.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/barrier.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/bitops.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/barrier.h \
     $(wildcard include/config/smp.h) \
   include/asm-generic/bitops/builtin-__ffs.h \
   include/asm-generic/bitops/builtin-ffs.h \
@@ -70,13 +70,13 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
   include/asm-generic/bitops/lock.h \
   include/asm-generic/bitops/non-atomic.h \
   include/asm-generic/bitops/le.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/byteorder.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/uapi/linux/byteorder/little_endian.h \
   include/linux/swab.h \
   include/uapi/linux/swab.h \
   arch/arm64/include/generated/asm/swab.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/swab.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/swab.h \
   include/linux/byteorder/generic.h \
   include/linux/log2.h \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
@@ -97,14 +97,14 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
   include/uapi/linux/string.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/string.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/string.h \
   include/linux/errno.h \
   include/uapi/linux/errno.h \
   arch/arm64/include/generated/asm/errno.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/errno.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/errno-base.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/errno.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/errno-base.h \
   include/uapi/linux/kernel.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/sysinfo.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/sysinfo.h \
   include/linux/platform_device.h \
     $(wildcard include/config/suspend.h) \
     $(wildcard include/config/hibernate/callbacks.h) \
@@ -124,7 +124,7 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
     $(wildcard include/config/debug/list.h) \
   include/linux/poison.h \
     $(wildcard include/config/illegal/pointer/value.h) \
-  /home/so-called-engineer/kernel/include/uapi/linux/const.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/const.h \
   include/linux/sysfs.h \
     $(wildcard include/config/debug/lock/alloc.h) \
     $(wildcard include/config/sysfs.h) \
@@ -137,17 +137,17 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
   include/linux/atomic.h \
     $(wildcard include/config/arch/has/atomic/or.h) \
     $(wildcard include/config/generic/atomic64.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/atomic.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/atomic.h \
   include/linux/irqflags.h \
     $(wildcard include/config/irqsoff/tracer.h) \
     $(wildcard include/config/preempt/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/irqflags.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/ptrace.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/irqflags.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/ptrace.h \
     $(wildcard include/config/compat.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/ptrace.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/hwcap.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/hwcap.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/ptrace.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/hwcap.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/hwcap.h \
   include/linux/exynos-ss.h \
     $(wildcard include/config/exynos/snapshot.h) \
     $(wildcard include/config/exynos/snapshot/mbox.h) \
@@ -161,10 +161,10 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
     $(wildcard include/config/exynos/snapshot/irq/exit.h) \
     $(wildcard include/config/exynos/snapshot/pstore.h) \
   include/linux/exynos-ss-soc.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/cmpxchg.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/cmpxchg.h \
   include/linux/bug.h \
     $(wildcard include/config/generic/bug.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/bug.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
@@ -181,16 +181,16 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
     $(wildcard include/config/preempt/notifiers.h) \
   include/linux/thread_info.h \
     $(wildcard include/config/debug/stack/usage.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/thread_info.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/thread_info.h \
     $(wildcard include/config/arm64/64k/pages.h) \
   include/linux/bottom_half.h \
   include/linux/spinlock_types.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/spinlock_types.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/spinlock_types.h \
   include/linux/rwlock_types.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/spinlock.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/processor.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/fpsimd.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/hw_breakpoint.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/spinlock.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/processor.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/fpsimd.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/hw_breakpoint.h \
     $(wildcard include/config/have/hw/breakpoint.h) \
   include/linux/rwlock.h \
   include/linux/spinlock_api_smp.h \
@@ -272,7 +272,7 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
     $(wildcard include/config/arch/uses/gettimeoffset.h) \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/cache.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/cache.h \
   include/linux/seqlock.h \
   include/linux/math64.h \
   arch/arm64/include/generated/asm/div64.h \
@@ -281,12 +281,12 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
   include/linux/jiffies.h \
   include/linux/timex.h \
   include/uapi/linux/timex.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/param.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/param.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/param.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/param.h \
   include/asm-generic/param.h \
     $(wildcard include/config/hz.h) \
   include/uapi/asm-generic/param.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/timex.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/timex.h \
   include/asm-generic/timex.h \
   include/linux/debugobjects.h \
     $(wildcard include/config/debug/objects.h) \
@@ -329,11 +329,11 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
   include/linux/page-flags-layout.h \
     $(wildcard include/config/sparsemem/vmemmap.h) \
   include/generated/bounds.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/sparsemem.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/page.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/pgtable-3level-types.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/sparsemem.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/page.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/pgtable-3level-types.h \
   include/asm-generic/pgtable-nopud.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/memory.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/memory.h \
   arch/arm64/include/generated/asm/sizes.h \
   include/asm-generic/sizes.h \
   include/linux/sizes.h \
@@ -367,23 +367,23 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
     $(wildcard include/config/use/percpu/numa/node/id.h) \
   include/linux/smp.h \
     $(wildcard include/config/use/generic/smp/helpers.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/smp.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/smp.h \
   include/linux/percpu.h \
     $(wildcard include/config/need/per/cpu/embed/first/chunk.h) \
     $(wildcard include/config/need/per/cpu/page/first/chunk.h) \
     $(wildcard include/config/have/setup/per/cpu/area.h) \
   include/linux/pfn.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/percpu.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/percpu.h \
   include/asm-generic/percpu.h \
   include/linux/percpu-defs.h \
     $(wildcard include/config/debug/force/weak/per/cpu.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/topology.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/topology.h \
     $(wildcard include/config/disable/cpu/sched/domain/balance.h) \
   include/asm-generic/topology.h \
   include/linux/mmdebug.h \
     $(wildcard include/config/debug/vm.h) \
     $(wildcard include/config/debug/virtual.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/device.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/device.h \
     $(wildcard include/config/iommu/api.h) \
   include/linux/pm_wakeup.h \
     $(wildcard include/config/sec/pm/debug.h) \
@@ -394,14 +394,14 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
   include/linux/io.h \
     $(wildcard include/config/mmu.h) \
     $(wildcard include/config/has/ioport.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/io.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/io.h \
     $(wildcard include/config/pci.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/pgtable.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/pgtable.h \
     $(wildcard include/config/tima/rkp.h) \
     $(wildcard include/config/transparent/hugepage.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/proc-fns.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/pgtable-hwdef.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/pgtable-3level-hwdef.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/proc-fns.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/pgtable-hwdef.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/pgtable-3level-hwdef.h \
   include/linux/rkp_entry.h \
     $(wildcard include/config/soc/exynos7420.h) \
     $(wildcard include/config/knox/kap.h) \
@@ -419,7 +419,7 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
     $(wildcard include/config/mmu/notifier.h) \
   include/linux/auxvec.h \
   include/uapi/linux/auxvec.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/auxvec.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/auxvec.h \
   include/linux/rbtree.h \
   include/linux/page-debug-flags.h \
     $(wildcard include/config/page/poisoning.h) \
@@ -428,7 +428,7 @@ deps_arch/arm64/mach-exynos/setup-exynos5-mipiphy.o := \
   include/linux/uprobes.h \
     $(wildcard include/config/arch/supports/uprobes.h) \
     $(wildcard include/config/uprobes.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/mmu.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/mmu.h \
   arch/arm64/include/generated/asm/early_ioremap.h \
   include/asm-generic/early_ioremap.h \
     $(wildcard include/config/generic/early/ioremap.h) \

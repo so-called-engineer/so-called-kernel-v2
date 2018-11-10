@@ -1,4 +1,4 @@
-cmd_scripts/kallsyms := gcc -Wp,-MD,scripts/.kallsyms.d -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer   -I/home/so-called-engineer/kernel/tools/include  -o scripts/kallsyms scripts/kallsyms.c  
+cmd_scripts/kallsyms := gcc -Wp,-MD,scripts/.kallsyms.d -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer   -I/home/so-called-engineer/Kernel/tools/include  -o scripts/kallsyms scripts/kallsyms.c  
 
 source_scripts/kallsyms := scripts/kallsyms.c
 

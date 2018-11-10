@@ -184,7 +184,6 @@ static ssize_t sel_write_enforce(struct file *file, const char __user *buf,
 	selnl_notify_setenforce(new_value);
 	selinux_status_update_setenforce(new_value);
 #else
-       new_value = 0;
 	if (new_value != selinux_enforcing) {
 		length = task_has_security(current, SECURITY__SETENFORCE);
 		if (length)
@@ -226,7 +225,7 @@ out:
 
 static const struct file_operations sel_enforce_ops = {
 	.read		= sel_read_enforce,
-	.write		= NULL,
+	.write		= sel_write_enforce,
 	.llseek		= generic_file_llseek,
 };
 

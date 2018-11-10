@@ -1,1 +1,0 @@
-cmd_drivers/mailbox/samsung/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/mailbox/samsung/built-in.o drivers/mailbox/samsung/apm-exynos7420.o drivers/mailbox/samsung/mailbox-exynos.o ; scripts/mod/modpost drivers/mailbox/samsung/built-in.o

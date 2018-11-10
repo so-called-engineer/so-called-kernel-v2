@@ -1,1 +1,0 @@
-cmd_drivers/pci/pcie/pcieportdrv.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/pci/pcie/pcieportdrv.o drivers/pci/pcie/portdrv_core.o drivers/pci/pcie/portdrv_pci.o drivers/pci/pcie/portdrv_bus.o ; scripts/mod/modpost drivers/pci/pcie/pcieportdrv.o

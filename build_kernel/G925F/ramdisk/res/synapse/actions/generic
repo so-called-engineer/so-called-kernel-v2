@@ -15,10 +15,3 @@ if [ -f "$1" ]; then
 
 	$BB echo "$($BB cat "$1")";
 fi;
-BB=/system/xbin/busybox;
-
-if [[ ! -z $2 ]]; then
-	echo "$2" > "$1"
-fi
-
-$BB echo "$(cat "$1")"

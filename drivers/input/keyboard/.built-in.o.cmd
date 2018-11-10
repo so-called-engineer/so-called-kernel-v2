@@ -1,1 +1,0 @@
-cmd_drivers/input/keyboard/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/input/keyboard/built-in.o drivers/input/keyboard/gpio_keys.o ; scripts/mod/modpost drivers/input/keyboard/built-in.o

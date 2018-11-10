@@ -1,1 +1,0 @@
-cmd_drivers/gps/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/gps/built-in.o drivers/gps/sec_gps_bcm47531.o ; scripts/mod/modpost drivers/gps/built-in.o

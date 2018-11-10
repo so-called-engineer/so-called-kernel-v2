@@ -1,4 +1,4 @@
-cmd_lib/kstrtox.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-gcc -Wp,-MD,lib/.kstrtox.o.d  -nostdinc -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include -I/home/so-called-engineer/kernel/arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I/home/so-called-engineer/kernel/arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I/home/so-called-engineer/kernel/include/uapi -Iinclude/generated/uapi -include /home/so-called-engineer/kernel/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Iarch/arm64/mach-exynos/include -Iarch/arm64/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -fdiagnostics-show-option -Werror -DANDROID_VERSION=990000 -Os -Wno-maybe-uninitialized -mgeneral-regs-only -fno-pic -Wframe-larger-than=2064 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DTIMA_LKM_AUTH_ENABLED -Idrivers/gud/gud-exynos7420/MobiCoreKernelApi/include/    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(kstrtox)"  -D"KBUILD_MODNAME=KBUILD_STR(kstrtox)" -c -o lib/kstrtox.o lib/kstrtox.c
+cmd_lib/kstrtox.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-gcc -Wp,-MD,lib/.kstrtox.o.d  -nostdinc -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include -I/home/so-called-engineer/Kernel/arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I/home/so-called-engineer/Kernel/arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I/home/so-called-engineer/Kernel/include/uapi -Iinclude/generated/uapi -include /home/so-called-engineer/Kernel/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Iarch/arm64/mach-exynos/include -Iarch/arm64/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -fdiagnostics-show-option -Werror -DANDROID_VERSION=990000 -Os -Wno-maybe-uninitialized -mgeneral-regs-only -fno-pic -Wframe-larger-than=2064 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DTIMA_LKM_AUTH_ENABLED -Idrivers/gud/gud-exynos7420/MobiCoreKernelApi/include/    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(kstrtox)"  -D"KBUILD_MODNAME=KBUILD_STR(kstrtox)" -c -o lib/kstrtox.o lib/kstrtox.c
 
 source_lib/kstrtox.o := lib/kstrtox.c
 
@@ -7,8 +7,8 @@ deps_lib/kstrtox.o := \
   include/linux/errno.h \
   include/uapi/linux/errno.h \
   arch/arm64/include/generated/asm/errno.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/errno.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/errno-base.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/errno.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/errno-base.h \
   include/linux/kernel.h \
     $(wildcard include/config/lbdaf.h) \
     $(wildcard include/config/preempt/voluntary.h) \
@@ -37,7 +37,7 @@ deps_lib/kstrtox.o := \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/modversions.h) \
     $(wildcard include/config/unused/symbols.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/linkage.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/linkage.h \
   include/linux/stddef.h \
   include/uapi/linux/stddef.h \
   include/linux/types.h \
@@ -47,18 +47,18 @@ deps_lib/kstrtox.o := \
     $(wildcard include/config/64bit.h) \
   include/uapi/linux/types.h \
   arch/arm64/include/generated/asm/types.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/types.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/types.h \
   include/asm-generic/int-ll64.h \
   include/uapi/asm-generic/int-ll64.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/bitsperlong.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/uapi/asm-generic/bitsperlong.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/posix_types.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/posix_types.h \
   arch/arm64/include/generated/asm/posix_types.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/posix_types.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/posix_types.h \
   include/linux/bitops.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/bitops.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/barrier.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/bitops.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/barrier.h \
     $(wildcard include/config/smp.h) \
   include/asm-generic/bitops/builtin-__ffs.h \
   include/asm-generic/bitops/builtin-ffs.h \
@@ -75,13 +75,13 @@ deps_lib/kstrtox.o := \
   include/asm-generic/bitops/lock.h \
   include/asm-generic/bitops/non-atomic.h \
   include/asm-generic/bitops/le.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/byteorder.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/uapi/linux/byteorder/little_endian.h \
   include/linux/swab.h \
   include/uapi/linux/swab.h \
   arch/arm64/include/generated/asm/swab.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/swab.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/swab.h \
   include/linux/byteorder/generic.h \
   include/linux/log2.h \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
@@ -102,31 +102,31 @@ deps_lib/kstrtox.o := \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
   include/uapi/linux/string.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/string.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/string.h \
   include/uapi/linux/kernel.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/sysinfo.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/sysinfo.h \
   include/linux/math64.h \
   arch/arm64/include/generated/asm/div64.h \
   include/asm-generic/div64.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/uaccess.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/uaccess.h \
   include/linux/thread_info.h \
     $(wildcard include/config/compat.h) \
     $(wildcard include/config/debug/stack/usage.h) \
   include/linux/bug.h \
     $(wildcard include/config/generic/bug.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/bug.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/asm-generic/bug.h \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/thread_info.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/thread_info.h \
     $(wildcard include/config/arm64/64k/pages.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/ptrace.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/ptrace.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/hwcap.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/hwcap.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/memory.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/const.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/ptrace.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/ptrace.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/hwcap.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/hwcap.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/memory.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/const.h \
   arch/arm64/include/generated/asm/sizes.h \
   include/asm-generic/sizes.h \
   include/linux/sizes.h \
@@ -135,7 +135,7 @@ deps_lib/kstrtox.o := \
     $(wildcard include/config/discontigmem.h) \
     $(wildcard include/config/sparsemem/vmemmap.h) \
     $(wildcard include/config/sparsemem.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/compiler.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/compiler.h \
   lib/kstrtox.h \
 
 lib/kstrtox.o: $(deps_lib/kstrtox.o)

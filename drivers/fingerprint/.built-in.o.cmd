@@ -1,1 +1,0 @@
-cmd_drivers/fingerprint/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/fingerprint/built-in.o drivers/fingerprint/fingerprint_sysfs.o drivers/fingerprint/vfs7xxx.o ; scripts/mod/modpost drivers/fingerprint/built-in.o

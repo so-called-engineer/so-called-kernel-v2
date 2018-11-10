@@ -1,1 +1,0 @@
-cmd_drivers/gud/TlcTui/TlcTui.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/gud/TlcTui/TlcTui.o drivers/gud/TlcTui/main.o drivers/gud/TlcTui/tlcTui.o drivers/gud/TlcTui/trustedui.o drivers/gud/TlcTui/platforms/exynos7420/tui-hal.o ; scripts/mod/modpost drivers/gud/TlcTui/TlcTui.o

@@ -1,9 +1,0 @@
-kernel/drivers/input/input-core.ko
-kernel/drivers/input/ff-memless.ko
-kernel/drivers/input/evdev.ko
-kernel/drivers/input/hall.ko
-kernel/drivers/input/certify_hall.ko
-kernel/drivers/input/keyboard/gpio_keys.ko
-kernel/drivers/input/misc/uinput.ko
-kernel/drivers/input/touchscreen/stm/fts_ts.ko
-kernel/drivers/input/touchscreen/stm/fts_fwu.ko

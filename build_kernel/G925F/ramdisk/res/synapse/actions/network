@@ -8,20 +8,6 @@ fi;
 case $1 in
 tcp_security)
   P=/res/synapse/sick/tcp_security
-# By UpInTheAir for SkyHigh kernels
-
-BB=/system/xbin/busybox;
-
-if [ "$($BB mount | grep rootfs | cut -c 26-27 | grep -c ro)" -eq "1" ]; then
-	$BB mount -o remount,rw /;
-fi;
-if [ "$($BB mount | grep system | grep -c ro)" -eq "1" ]; then
-	$BB mount -o remount,rw /system;
-fi;
-
-case $1 in
-tcp_security)
-  P=/res/synapse/Sickness/tcp_security
   if [ ! -z "$2" ]; then
   if [ "$2" == Disabled ]; then
     echo 0 > $P
@@ -75,9 +61,6 @@ dns)
   P=/res/synapse/sick/dns;
   IPTABLES=/system/bin/iptables;
   DNS_STATUS=$(cat /res/synapse/sick/dns);
-  P=/res/synapse/Sickness/dns;
-  IPTABLES=/system/bin/iptables;
-  DNS_STATUS=$(cat /res/synapse/Sickness/dns);
   if [ ! -z "$2" ]; then
   if [ "$2" == Disabled ]; then
 	if [ "$DNS_STATUS" != 0 ]; then
@@ -151,7 +134,6 @@ dns)
   ;;
 gps_zone)
   P=/res/synapse/sick/gps_zone
-  P=/res/synapse/Sickness/gps_zone
   var_gps="/system/etc/gps.conf";
 
 # Backup original gps.conf in case of user revert.
@@ -261,7 +243,6 @@ gps_zone)
   ;;
 wifi_passwords_save)
   WIFI=/sdcard/sick/wifi;
-  WIFI=/sdcard/Sickness/wifi;
   [ ! -d "$WIFI" ] && mkdir -p "$WIFI";
   chmod 755 $WIFI
   P=$WIFI/wifi.txt
@@ -275,11 +256,6 @@ wifi_passwords_restore)
 	svc wifi disable 2> /dev/null;
 	rm -f /data/misc/dhcp/dhcpcd*;
 	cat /sdcard/sick/wifi/wifi.txt > $P
-  if [ -f /sdcard/Sickness/wifi/wifi.txt ]; then
-	P=/data/misc/wifi/wpa_supplicant.conf
-	svc wifi disable 2> /dev/null;
-	rm -f /data/misc/dhcp/dhcpcd*;
-	cat /sdcard/Sickness/wifi/wifi.txt > $P
 	$BB chmod 660 $P;
 	svc wifi enable 2> /dev/null;
 	sleep 1
@@ -290,7 +266,6 @@ wifi_passwords_restore)
   ;;
 IPv6)
   P=/res/synapse/sick/IPv6
-  P=/res/synapse/Sickness/IPv6
   if [ ! -z $2 ]; then
   if [ $2 == Disabled ]; then
 	echo 0 > $P

@@ -1,1 +1,0 @@
-cmd_drivers/gud/gud-exynos7420/sec-os-booster/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/gud/gud-exynos7420/sec-os-booster/built-in.o drivers/gud/gud-exynos7420/sec-os-booster/sec_os_booster.o ; scripts/mod/modpost drivers/gud/gud-exynos7420/sec-os-booster/built-in.o

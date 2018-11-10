@@ -1,3 +1,0 @@
-kernel/drivers/usb/phy/phy-samsung-usb.ko
-kernel/drivers/usb/phy/phy-samsung-usb2-dummy.ko
-kernel/drivers/usb/phy/phy-samsung-usb3.ko

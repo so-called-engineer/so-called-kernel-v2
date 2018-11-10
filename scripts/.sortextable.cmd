@@ -1,4 +1,4 @@
-cmd_scripts/sortextable := gcc -Wp,-MD,scripts/.sortextable.d -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer   -I/home/so-called-engineer/kernel/tools/include -I/home/so-called-engineer/kernel/tools/include -o scripts/sortextable scripts/sortextable.c  
+cmd_scripts/sortextable := gcc -Wp,-MD,scripts/.sortextable.d -Wall -Wmissing-prototypes -Wstrict-prototypes -O2 -fomit-frame-pointer   -I/home/so-called-engineer/Kernel/tools/include -I/home/so-called-engineer/Kernel/tools/include -o scripts/sortextable scripts/sortextable.c  
 
 source_scripts/sortextable := scripts/sortextable.c
 
@@ -92,7 +92,7 @@ deps_scripts/sortextable := \
   /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/unistd.h \
-  /home/so-called-engineer/kernel/tools/include/tools/be_byteshift.h \
+  /home/so-called-engineer/Kernel/tools/include/tools/be_byteshift.h \
   /usr/include/linux/types.h \
   /usr/include/x86_64-linux-gnu/asm/types.h \
   /usr/include/asm-generic/types.h \
@@ -105,7 +105,7 @@ deps_scripts/sortextable := \
   /usr/include/x86_64-linux-gnu/asm/posix_types.h \
   /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
   /usr/include/asm-generic/posix_types.h \
-  /home/so-called-engineer/kernel/tools/include/tools/le_byteshift.h \
+  /home/so-called-engineer/Kernel/tools/include/tools/le_byteshift.h \
   scripts/sortextable.h \
 
 scripts/sortextable: $(deps_scripts/sortextable)

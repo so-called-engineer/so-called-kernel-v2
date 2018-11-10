@@ -1,1 +1,0 @@
-cmd_drivers/gpu/gpu_sysfs/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/gpu/gpu_sysfs/built-in.o drivers/gpu/gpu_sysfs/gpu_sysfs.o ; scripts/mod/modpost drivers/gpu/gpu_sysfs/built-in.o

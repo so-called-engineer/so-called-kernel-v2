@@ -1,1 +1,0 @@
-cmd_drivers/media/platform/exynos/jpeg/jpeg.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/media/platform/exynos/jpeg/jpeg.o drivers/media/platform/exynos/jpeg/jpeg-core.o drivers/media/platform/exynos/jpeg/jpeg-regs.o ; scripts/mod/modpost drivers/media/platform/exynos/jpeg/jpeg.o

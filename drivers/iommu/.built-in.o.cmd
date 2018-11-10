@@ -1,1 +1,0 @@
-cmd_drivers/iommu/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/iommu/built-in.o drivers/iommu/iommu.o drivers/iommu/of_iommu.o drivers/iommu/exynos-iovmm-v6.o drivers/iommu/exynos-iommu-v6.o drivers/iommu/exynos-iommu-log.o ; scripts/mod/modpost drivers/iommu/built-in.o

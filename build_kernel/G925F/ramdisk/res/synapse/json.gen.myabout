@@ -8,13 +8,11 @@ cat << CTAG
 		description:"\n",
 		refresh:10000000,
 		action:"echo Welcome to"
-		action:"echo Hello"
 	}},
 	{ SLiveLabel:{
 		refresh:10000000,
 		style:"bold",
-		action:"echo The so-called Kernel !"
-		action:"echo Welcome to so-called kernel !"
+		action:"echo The Twisted Kernel !"
 	}},
 	{ SLiveLabel:{
 		refresh:10000000,
@@ -23,11 +21,26 @@ cat << CTAG
 	{ SLiveLabel:{
 		refresh:10000000,
 		style:"bold",
-		action:"echo The So-called-engineer"
-		action:"echo tvm2487"
+		action:"echo The Sickness"
 	}},
 	{ SSpacer:{
 		height:1
+	}},
+	{ SButton:{
+		label:"PayPal Donation",
+		action:"am start -a android.intent.action.VIEW -d > /dev/null;
+		echo Opening browser...;"
+	}},
+	{ SSpacer:{
+		height:1
+	}},
+	{ SButton:{
+		label:"Twisted Kernel thread @ XDA-Developers",
+		action:"am start -a android.intent.action.VIEW -d http://forum.xda-developers.com/tmobile-galaxy-s6/orig-development/kernels-twisted-kernel-6-0-1-mm-5-11-16-t3377283 > /dev/null;
+		echo Opening browser...;"
+	}},
+	{ SSpacer:{
+		height:2
 	}},
 	{ SPane:{
 		title:"Up Time:"

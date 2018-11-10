@@ -1,4 +1,4 @@
-cmd_kernel/audit.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-gcc -Wp,-MD,kernel/.audit.o.d  -nostdinc -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include -I/home/so-called-engineer/kernel/arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I/home/so-called-engineer/kernel/arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I/home/so-called-engineer/kernel/include/uapi -Iinclude/generated/uapi -include /home/so-called-engineer/kernel/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Iarch/arm64/mach-exynos/include -Iarch/arm64/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -fdiagnostics-show-option -Werror -DANDROID_VERSION=990000 -Os -Wno-maybe-uninitialized -mgeneral-regs-only -fno-pic -Wframe-larger-than=2064 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DTIMA_LKM_AUTH_ENABLED -Idrivers/gud/gud-exynos7420/MobiCoreKernelApi/include/    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(audit)"  -D"KBUILD_MODNAME=KBUILD_STR(audit)" -c -o kernel/audit.o kernel/audit.c
+cmd_kernel/audit.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-gcc -Wp,-MD,kernel/.audit.o.d  -nostdinc -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include -I/home/so-called-engineer/Kernel/arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I/home/so-called-engineer/Kernel/arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I/home/so-called-engineer/Kernel/include/uapi -Iinclude/generated/uapi -include /home/so-called-engineer/Kernel/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Iarch/arm64/mach-exynos/include -Iarch/arm64/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -fdiagnostics-show-option -Werror -DANDROID_VERSION=990000 -Os -Wno-maybe-uninitialized -mgeneral-regs-only -fno-pic -Wframe-larger-than=2064 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DTIMA_LKM_AUTH_ENABLED -Idrivers/gud/gud-exynos7420/MobiCoreKernelApi/include/    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(audit)"  -D"KBUILD_MODNAME=KBUILD_STR(audit)" -c -o kernel/audit.o kernel/audit.c
 
 source_kernel/audit.o := kernel/audit.c
 
@@ -31,34 +31,34 @@ deps_kernel/audit.o := \
     $(wildcard include/config/64bit.h) \
   include/uapi/linux/types.h \
   arch/arm64/include/generated/asm/types.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/types.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/types.h \
   include/asm-generic/int-ll64.h \
   include/uapi/asm-generic/int-ll64.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/bitsperlong.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/uapi/asm-generic/bitsperlong.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/posix_types.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/posix_types.h \
   include/linux/stddef.h \
   include/uapi/linux/stddef.h \
   arch/arm64/include/generated/asm/posix_types.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/posix_types.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/posix_types.h \
   include/linux/atomic.h \
     $(wildcard include/config/arch/has/atomic/or.h) \
     $(wildcard include/config/generic/atomic64.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/atomic.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/atomic.h \
   include/linux/irqflags.h \
     $(wildcard include/config/trace/irqflags.h) \
     $(wildcard include/config/irqsoff/tracer.h) \
     $(wildcard include/config/preempt/tracer.h) \
     $(wildcard include/config/trace/irqflags/support.h) \
   include/linux/typecheck.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/irqflags.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/ptrace.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/irqflags.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/ptrace.h \
     $(wildcard include/config/compat.h) \
     $(wildcard include/config/smp.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/ptrace.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/hwcap.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/hwcap.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/ptrace.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/hwcap.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/hwcap.h \
   include/linux/exynos-ss.h \
     $(wildcard include/config/exynos/snapshot.h) \
     $(wildcard include/config/exynos/snapshot/mbox.h) \
@@ -72,11 +72,11 @@ deps_kernel/audit.o := \
     $(wildcard include/config/exynos/snapshot/irq/exit.h) \
     $(wildcard include/config/exynos/snapshot/pstore.h) \
   include/linux/exynos-ss-soc.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/barrier.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/cmpxchg.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/barrier.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/cmpxchg.h \
   include/linux/bug.h \
     $(wildcard include/config/generic/bug.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/bug.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/bug.h \
     $(wildcard include/config/bug.h) \
     $(wildcard include/config/debug/bugverbose.h) \
   include/linux/linkage.h \
@@ -85,7 +85,7 @@ deps_kernel/audit.o := \
     $(wildcard include/config/have/underscore/symbol/prefix.h) \
     $(wildcard include/config/modversions.h) \
     $(wildcard include/config/unused/symbols.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/linkage.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/linkage.h \
   include/asm-generic/bug.h \
     $(wildcard include/config/generic/bug/relative/pointers.h) \
   include/linux/kernel.h \
@@ -97,7 +97,7 @@ deps_kernel/audit.o := \
     $(wildcard include/config/ftrace/mcount/record.h) \
   /home/so-called-engineer/aarch64-linux-android-4.9/lib/gcc/aarch64-linux-android/4.9.x/include/stdarg.h \
   include/linux/bitops.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/bitops.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/bitops.h \
   include/asm-generic/bitops/builtin-__ffs.h \
   include/asm-generic/bitops/builtin-ffs.h \
   include/asm-generic/bitops/builtin-__fls.h \
@@ -113,13 +113,13 @@ deps_kernel/audit.o := \
   include/asm-generic/bitops/lock.h \
   include/asm-generic/bitops/non-atomic.h \
   include/asm-generic/bitops/le.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/byteorder.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/uapi/linux/byteorder/little_endian.h \
   include/linux/swab.h \
   include/uapi/linux/swab.h \
   arch/arm64/include/generated/asm/swab.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/swab.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/swab.h \
   include/linux/byteorder/generic.h \
   include/linux/log2.h \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
@@ -135,14 +135,14 @@ deps_kernel/audit.o := \
   include/linux/string.h \
     $(wildcard include/config/binary/printf.h) \
   include/uapi/linux/string.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/string.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/string.h \
   include/linux/errno.h \
   include/uapi/linux/errno.h \
   arch/arm64/include/generated/asm/errno.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/errno.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/errno-base.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/errno.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/errno-base.h \
   include/uapi/linux/kernel.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/sysinfo.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/sysinfo.h \
   include/asm-generic/atomic-long.h \
   include/linux/mm.h \
     $(wildcard include/config/discontigmem.h) \
@@ -206,25 +206,25 @@ deps_kernel/audit.o := \
     $(wildcard include/config/preempt/notifiers.h) \
   include/linux/thread_info.h \
     $(wildcard include/config/debug/stack/usage.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/thread_info.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/thread_info.h \
     $(wildcard include/config/arm64/64k/pages.h) \
   include/linux/list.h \
     $(wildcard include/config/debug/list.h) \
   include/linux/poison.h \
     $(wildcard include/config/illegal/pointer/value.h) \
-  /home/so-called-engineer/kernel/include/uapi/linux/const.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/const.h \
   include/linux/bottom_half.h \
   include/linux/spinlock_types.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/spinlock_types.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/spinlock_types.h \
   include/linux/lockdep.h \
     $(wildcard include/config/lockdep.h) \
     $(wildcard include/config/lock/stat.h) \
     $(wildcard include/config/prove/rcu.h) \
   include/linux/rwlock_types.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/spinlock.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/processor.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/fpsimd.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/hw_breakpoint.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/spinlock.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/processor.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/fpsimd.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/hw_breakpoint.h \
     $(wildcard include/config/have/hw/breakpoint.h) \
   include/linux/rwlock.h \
   include/linux/spinlock_api_smp.h \
@@ -263,7 +263,7 @@ deps_kernel/audit.o := \
   include/uapi/linux/wait.h \
   include/linux/cache.h \
     $(wildcard include/config/arch/has/cache/line/size.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/cache.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/cache.h \
   include/linux/threads.h \
     $(wildcard include/config/nr/cpus.h) \
     $(wildcard include/config/base/small.h) \
@@ -278,11 +278,11 @@ deps_kernel/audit.o := \
     $(wildcard include/config/hugetlb/page/size/variable.h) \
   include/linux/page-flags-layout.h \
   include/generated/bounds.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/sparsemem.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/page.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/pgtable-3level-types.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/sparsemem.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/page.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/pgtable-3level-types.h \
   include/asm-generic/pgtable-nopud.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/memory.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/memory.h \
   arch/arm64/include/generated/asm/sizes.h \
   include/asm-generic/sizes.h \
   include/linux/sizes.h \
@@ -341,12 +341,12 @@ deps_kernel/audit.o := \
   include/linux/jiffies.h \
   include/linux/timex.h \
   include/uapi/linux/timex.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/param.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/param.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/param.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/param.h \
   include/asm-generic/param.h \
     $(wildcard include/config/hz.h) \
   include/uapi/asm-generic/param.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/timex.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/timex.h \
   include/asm-generic/timex.h \
   include/linux/topology.h \
     $(wildcard include/config/sched/smt.h) \
@@ -355,17 +355,17 @@ deps_kernel/audit.o := \
     $(wildcard include/config/use/percpu/numa/node/id.h) \
   include/linux/smp.h \
     $(wildcard include/config/use/generic/smp/helpers.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/smp.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/smp.h \
   include/linux/percpu.h \
     $(wildcard include/config/need/per/cpu/embed/first/chunk.h) \
     $(wildcard include/config/need/per/cpu/page/first/chunk.h) \
     $(wildcard include/config/have/setup/per/cpu/area.h) \
   include/linux/pfn.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/percpu.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/percpu.h \
   include/asm-generic/percpu.h \
   include/linux/percpu-defs.h \
     $(wildcard include/config/debug/force/weak/per/cpu.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/topology.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/topology.h \
     $(wildcard include/config/disable/cpu/sched/domain/balance.h) \
   include/asm-generic/topology.h \
   include/linux/mmdebug.h \
@@ -385,7 +385,7 @@ deps_kernel/audit.o := \
     $(wildcard include/config/mmu/notifier.h) \
   include/linux/auxvec.h \
   include/uapi/linux/auxvec.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/auxvec.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/auxvec.h \
   include/linux/page-debug-flags.h \
     $(wildcard include/config/page/poisoning.h) \
     $(wildcard include/config/page/guard.h) \
@@ -393,15 +393,15 @@ deps_kernel/audit.o := \
   include/linux/uprobes.h \
     $(wildcard include/config/arch/supports/uprobes.h) \
     $(wildcard include/config/uprobes.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/mmu.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/mmu.h \
   include/linux/range.h \
   include/linux/bit_spinlock.h \
   include/linux/shrinker.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/pgtable.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/pgtable.h \
     $(wildcard include/config/tima/rkp.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/proc-fns.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/pgtable-hwdef.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/pgtable-3level-hwdef.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/proc-fns.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/pgtable-hwdef.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/pgtable-3level-hwdef.h \
   include/linux/rkp_entry.h \
     $(wildcard include/config/soc/exynos7420.h) \
     $(wildcard include/config/knox/kap.h) \
@@ -497,18 +497,18 @@ deps_kernel/audit.o := \
   include/linux/highuid.h \
   include/uapi/linux/ipc.h \
   arch/arm64/include/generated/asm/ipcbuf.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/ipcbuf.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/ipcbuf.h \
   arch/arm64/include/generated/asm/sembuf.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/sembuf.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/sembuf.h \
   include/linux/signal.h \
     $(wildcard include/config/old/sigaction.h) \
   include/uapi/linux/signal.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/signal.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/signal.h \
   include/asm-generic/signal.h \
   include/uapi/asm-generic/signal.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/signal-defs.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/sigcontext.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/siginfo.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/signal-defs.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/sigcontext.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/siginfo.h \
   include/asm-generic/siginfo.h \
   include/uapi/asm-generic/siginfo.h \
   include/linux/pid.h \
@@ -518,9 +518,9 @@ deps_kernel/audit.o := \
     $(wildcard include/config/seccomp.h) \
     $(wildcard include/config/seccomp/filter.h) \
   include/uapi/linux/seccomp.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/seccomp.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/unistd.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/unistd.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/seccomp.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/unistd.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/unistd.h \
   include/asm-generic/unistd.h \
   include/uapi/asm-generic/unistd.h \
   include/asm-generic/seccomp.h \
@@ -557,11 +557,11 @@ deps_kernel/audit.o := \
     $(wildcard include/config/odd/rt/sigaction.h) \
     $(wildcard include/config/clone/backwards.h) \
     $(wildcard include/config/clone/backwards3.h) \
-  /home/so-called-engineer/kernel/include/uapi/linux/aio_abi.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/unistd.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/aio_abi.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/unistd.h \
   include/linux/quota.h \
     $(wildcard include/config/quota/netlink/interface.h) \
-  /home/so-called-engineer/kernel/include/uapi/linux/dqblk_xfs.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/dqblk_xfs.h \
   include/linux/dqblk_v1.h \
   include/linux/dqblk_v2.h \
   include/linux/dqblk_qtree.h \
@@ -598,10 +598,10 @@ deps_kernel/audit.o := \
   include/linux/list_bl.h \
   include/linux/path.h \
   include/linux/stat.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/stat.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/stat.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/stat.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/compat.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/stat.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/stat.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/stat.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/compat.h \
   include/linux/ptrace.h \
   include/linux/pid_namespace.h \
     $(wildcard include/config/pid/ns.h) \
@@ -610,7 +610,7 @@ deps_kernel/audit.o := \
   include/uapi/linux/stat.h \
   include/linux/radix-tree.h \
   include/linux/semaphore.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/fiemap.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/fiemap.h \
   include/linux/migrate_mode.h \
   include/linux/percpu-rwsem.h \
   include/linux/blk_types.h \
@@ -620,29 +620,29 @@ deps_kernel/audit.o := \
     $(wildcard include/config/ufs/fmp/dm/crypt.h) \
     $(wildcard include/config/journal/data/tag.h) \
   include/uapi/linux/fs.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/limits.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/ioctl.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/limits.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/ioctl.h \
   arch/arm64/include/generated/asm/ioctl.h \
   include/asm-generic/ioctl.h \
   include/uapi/asm-generic/ioctl.h \
   include/linux/nfs_fs_i.h \
   include/linux/fcntl.h \
   include/uapi/linux/fcntl.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/fcntl.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/fcntl.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/uaccess.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/compiler.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/fcntl.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/fcntl.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/uaccess.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/compiler.h \
   include/uapi/linux/poll.h \
   arch/arm64/include/generated/asm/poll.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/poll.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/poll.h \
   include/linux/trace_seq.h \
   include/linux/hardirq.h \
     $(wildcard include/config/generic/hardirqs.h) \
   include/linux/ftrace_irq.h \
     $(wildcard include/config/ftrace/nmi/enter.h) \
   include/linux/vtime.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/hardirq.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/irq.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/hardirq.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/irq.h \
   include/asm-generic/irq.h \
   include/linux/irq_cpustat.h \
   include/linux/perf_event.h \
@@ -651,7 +651,7 @@ deps_kernel/audit.o := \
     $(wildcard include/config/cgroup/perf.h) \
     $(wildcard include/config/cpu/sup/intel.h) \
   include/uapi/linux/perf_event.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/perf_event.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/perf_event.h \
     $(wildcard include/config/hw/perf/events.h) \
   arch/arm64/include/generated/asm/local64.h \
   include/asm-generic/local64.h \
@@ -668,22 +668,22 @@ deps_kernel/audit.o := \
   include/asm-generic/trace_clock.h \
   include/linux/kallsyms.h \
     $(wildcard include/config/kallsyms.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/ftrace.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/insn.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/ftrace.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/insn.h \
   include/linux/compat.h \
     $(wildcard include/config/compat/old/sigaction.h) \
   include/linux/socket.h \
   arch/arm64/include/generated/asm/socket.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/socket.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/socket.h \
   arch/arm64/include/generated/asm/sockios.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/sockios.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/sockios.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/sockios.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/sockios.h \
   include/linux/uio.h \
   include/uapi/linux/uio.h \
   include/uapi/linux/socket.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/if.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/if.h \
     $(wildcard include/config/mptcp.h) \
-  /home/so-called-engineer/kernel/include/uapi/linux/hdlc/ioctl.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/hdlc/ioctl.h \
   include/linux/cpu.h \
     $(wildcard include/config/arch/has/cpu/autoprobe.h) \
     $(wildcard include/config/arch/cpu/probe/release.h) \
@@ -710,7 +710,7 @@ deps_kernel/audit.o := \
     $(wildcard include/config/pm/clk.h) \
     $(wildcard include/config/pm/generic/domains.h) \
   include/linux/ratelimit.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/device.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/device.h \
     $(wildcard include/config/iommu/api.h) \
   include/linux/pm_wakeup.h \
     $(wildcard include/config/sec/pm/debug.h) \
@@ -718,10 +718,10 @@ deps_kernel/audit.o := \
     $(wildcard include/config/irq/work.h) \
   include/linux/perf_regs.h \
     $(wildcard include/config/have/perf/regs.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/perf_regs.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/perf_regs.h \
   include/linux/audit.h \
   include/uapi/linux/audit.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/elf-em.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/elf-em.h \
   include/net/sock.h \
     $(wildcard include/config/net.h) \
     $(wildcard include/config/net/ns.h) \
@@ -755,7 +755,7 @@ deps_kernel/audit.o := \
     $(wildcard include/config/netpoll/trap.h) \
   include/linux/pm_qos.h \
   include/linux/miscdevice.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/major.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/major.h \
   include/linux/delay.h \
   arch/arm64/include/generated/asm/delay.h \
   include/asm-generic/delay.h \
@@ -766,11 +766,11 @@ deps_kernel/audit.o := \
     $(wildcard include/config/async/tx/dma.h) \
   include/linux/scatterlist.h \
     $(wildcard include/config/debug/sg.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/scatterlist.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/scatterlist.h \
     $(wildcard include/config/arm/has/sg/chain.h) \
   include/asm-generic/scatterlist.h \
     $(wildcard include/config/need/sg/dma/length.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/io.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/io.h \
     $(wildcard include/config/pci.h) \
   arch/arm64/include/generated/asm/early_ioremap.h \
   include/asm-generic/early_ioremap.h \
@@ -812,7 +812,7 @@ deps_kernel/audit.o := \
     $(wildcard include/config/need/dma/map/state.h) \
   include/linux/dma-attrs.h \
   include/linux/dma-direction.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/dma-mapping.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/dma-mapping.h \
   include/linux/vmalloc.h \
   include/linux/dma-debug.h \
     $(wildcard include/config/dma/api/debug.h) \
@@ -832,7 +832,7 @@ deps_kernel/audit.o := \
   include/net/netns/mib.h \
     $(wildcard include/config/xfrm/statistics.h) \
   include/net/snmp.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/snmp.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/snmp.h \
   include/linux/u64_stats_sync.h \
   include/net/netns/unix.h \
   include/net/netns/packet.h \
@@ -867,13 +867,13 @@ deps_kernel/audit.o := \
   include/linux/netfilter/nf_conntrack_tcp.h \
   include/uapi/linux/netfilter/nf_conntrack_tcp.h \
   include/net/netns/xfrm.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/xfrm.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/xfrm.h \
   include/linux/seq_file_net.h \
   include/net/dsa.h \
   include/net/netprio_cgroup.h \
   include/linux/cgroup.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/cgroupstats.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/taskstats.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/cgroupstats.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/taskstats.h \
   include/linux/prio_heap.h \
   include/linux/idr.h \
   include/linux/xattr.h \
@@ -886,7 +886,7 @@ deps_kernel/audit.o := \
     $(wildcard include/config/net/cls/cgroup.h) \
     $(wildcard include/config/cgroup/hugetlb.h) \
     $(wildcard include/config/cgroup/bcache.h) \
-  /home/so-called-engineer/kernel/include/uapi/linux/neighbour.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/neighbour.h \
   include/linux/netlink.h \
   include/net/scm.h \
     $(wildcard include/config/security/network.h) \
@@ -897,7 +897,7 @@ deps_kernel/audit.o := \
     $(wildcard include/config/security/yama.h) \
   include/uapi/linux/netlink.h \
   include/uapi/linux/netdevice.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/if_packet.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/if_packet.h \
   include/linux/if_link.h \
   include/uapi/linux/if_link.h \
   include/linux/uaccess.h \
@@ -913,26 +913,26 @@ deps_kernel/audit.o := \
   include/net/dst.h \
   include/linux/rtnetlink.h \
   include/uapi/linux/rtnetlink.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/if_addr.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/if_addr.h \
   include/net/neighbour.h \
   include/net/rtnetlink.h \
   include/net/netlink.h \
   include/linux/freezer.h \
   include/linux/tty.h \
     $(wildcard include/config/tty.h) \
-  /home/so-called-engineer/kernel/include/uapi/linux/termios.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/termios.h \
   arch/arm64/include/generated/asm/termios.h \
   include/asm-generic/termios.h \
   include/uapi/asm-generic/termios.h \
   arch/arm64/include/generated/asm/termbits.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/termbits.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/termbits.h \
   arch/arm64/include/generated/asm/ioctls.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/ioctls.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/ioctls.h \
   include/linux/tty_driver.h \
     $(wildcard include/config/console/poll.h) \
   include/linux/cdev.h \
   include/linux/tty_ldisc.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/tty_flags.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/tty_flags.h \
   include/uapi/linux/tty.h \
   kernel/audit.h \
     $(wildcard include/config/audit/watch.h) \

@@ -1,6 +1,0 @@
-kernel/drivers/video/exynos/decon/panels/dimming_core.ko
-kernel/drivers/video/exynos/decon/panels/mdnie_lite.ko
-kernel/drivers/video/exynos/decon/panels/mdnie_tuning.ko
-kernel/drivers/video/exynos/decon/panels/lcd_sysfs.ko
-kernel/drivers/video/exynos/decon/panels/s6e3hf2_wqhd_lcd_ctrl.ko
-kernel/drivers/video/exynos/decon/panels/dsim_backlight.ko

@@ -1,3 +1,0 @@
-kernel/drivers/sensorhub/brcm_legacy/bbdpl/utils/crc8bits_c.ko
-kernel/drivers/sensorhub/brcm_legacy/bbdpl/utils/ring_buffer_c.ko
-kernel/drivers/sensorhub/brcm_legacy/bbdpl/utils/stream_codec_c.ko

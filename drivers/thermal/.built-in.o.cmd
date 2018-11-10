@@ -1,1 +1,0 @@
-cmd_drivers/thermal/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/thermal/built-in.o drivers/thermal/thermal_sys.o drivers/thermal/exynos7420_thermal.o drivers/thermal/cal_tmu7420.o drivers/thermal/ipa.o ; scripts/mod/modpost drivers/thermal/built-in.o

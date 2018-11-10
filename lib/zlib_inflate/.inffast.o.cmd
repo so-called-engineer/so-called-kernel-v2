@@ -1,4 +1,4 @@
-cmd_lib/zlib_inflate/inffast.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-gcc -Wp,-MD,lib/zlib_inflate/.inffast.o.d  -nostdinc -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include -I/home/so-called-engineer/kernel/arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I/home/so-called-engineer/kernel/arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I/home/so-called-engineer/kernel/include/uapi -Iinclude/generated/uapi -include /home/so-called-engineer/kernel/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Iarch/arm64/mach-exynos/include -Iarch/arm64/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -fdiagnostics-show-option -Werror -DANDROID_VERSION=990000 -Os -Wno-maybe-uninitialized -mgeneral-regs-only -fno-pic -Wframe-larger-than=2064 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DTIMA_LKM_AUTH_ENABLED -Idrivers/gud/gud-exynos7420/MobiCoreKernelApi/include/    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(inffast)"  -D"KBUILD_MODNAME=KBUILD_STR(zlib_inflate)" -c -o lib/zlib_inflate/inffast.o lib/zlib_inflate/inffast.c
+cmd_lib/zlib_inflate/inffast.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-gcc -Wp,-MD,lib/zlib_inflate/.inffast.o.d  -nostdinc -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include -I/home/so-called-engineer/Kernel/arch/arm64/include -Iarch/arm64/include/generated  -Iinclude -I/home/so-called-engineer/Kernel/arch/arm64/include/uapi -Iarch/arm64/include/generated/uapi -I/home/so-called-engineer/Kernel/include/uapi -Iinclude/generated/uapi -include /home/so-called-engineer/Kernel/include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Iarch/arm64/mach-exynos/include -Iarch/arm64/plat-samsung/include -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -fno-delete-null-pointer-checks -fdiagnostics-show-option -Werror -DANDROID_VERSION=990000 -Os -Wno-maybe-uninitialized -mgeneral-regs-only -fno-pic -Wframe-larger-than=2064 -fno-stack-protector -Wno-unused-but-set-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -g -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -DTIMA_LKM_AUTH_ENABLED -Idrivers/gud/gud-exynos7420/MobiCoreKernelApi/include/    -D"KBUILD_STR(s)=\#s" -D"KBUILD_BASENAME=KBUILD_STR(inffast)"  -D"KBUILD_MODNAME=KBUILD_STR(zlib_inflate)" -c -o lib/zlib_inflate/inffast.o lib/zlib_inflate/inffast.c
 
 source_lib/zlib_inflate/inffast.o := lib/zlib_inflate/inffast.c
 
@@ -29,20 +29,20 @@ deps_lib/zlib_inflate/inffast.o := \
     $(wildcard include/config/64bit.h) \
   include/uapi/linux/types.h \
   arch/arm64/include/generated/asm/types.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/types.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/types.h \
   include/asm-generic/int-ll64.h \
   include/uapi/asm-generic/int-ll64.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/bitsperlong.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/bitsperlong.h \
   include/asm-generic/bitsperlong.h \
   include/uapi/asm-generic/bitsperlong.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/posix_types.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/posix_types.h \
   include/linux/stddef.h \
   include/uapi/linux/stddef.h \
   arch/arm64/include/generated/asm/posix_types.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/posix_types.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/posix_types.h \
   /home/so-called-engineer/aarch64-linux-android-4.9/lib/gcc/aarch64-linux-android/4.9.x/include/stdarg.h \
   include/uapi/linux/string.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/string.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/string.h \
   include/linux/kernel.h \
     $(wildcard include/config/preempt/voluntary.h) \
     $(wildcard include/config/debug/atomic/sleep.h) \
@@ -57,10 +57,10 @@ deps_lib/zlib_inflate/inffast.o := \
     $(wildcard include/config/modules.h) \
     $(wildcard include/config/modversions.h) \
     $(wildcard include/config/unused/symbols.h) \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/linkage.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/linkage.h \
   include/linux/bitops.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/bitops.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/asm/barrier.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/bitops.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/asm/barrier.h \
     $(wildcard include/config/smp.h) \
   include/asm-generic/bitops/builtin-__ffs.h \
   include/asm-generic/bitops/builtin-ffs.h \
@@ -77,13 +77,13 @@ deps_lib/zlib_inflate/inffast.o := \
   include/asm-generic/bitops/lock.h \
   include/asm-generic/bitops/non-atomic.h \
   include/asm-generic/bitops/le.h \
-  /home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/byteorder.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/uapi/linux/byteorder/little_endian.h \
   include/linux/swab.h \
   include/uapi/linux/swab.h \
   arch/arm64/include/generated/asm/swab.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/swab.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/swab.h \
   include/linux/byteorder/generic.h \
   include/linux/log2.h \
     $(wildcard include/config/arch/has/ilog2/u32.h) \
@@ -104,10 +104,10 @@ deps_lib/zlib_inflate/inffast.o := \
   include/linux/errno.h \
   include/uapi/linux/errno.h \
   arch/arm64/include/generated/asm/errno.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/errno.h \
-  /home/so-called-engineer/kernel/include/uapi/asm-generic/errno-base.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/errno.h \
+  /home/so-called-engineer/Kernel/include/uapi/asm-generic/errno-base.h \
   include/uapi/linux/kernel.h \
-  /home/so-called-engineer/kernel/include/uapi/linux/sysinfo.h \
+  /home/so-called-engineer/Kernel/include/uapi/linux/sysinfo.h \
   lib/zlib_inflate/inftrees.h \
   lib/zlib_inflate/inflate.h \
   lib/zlib_inflate/inffast.h \

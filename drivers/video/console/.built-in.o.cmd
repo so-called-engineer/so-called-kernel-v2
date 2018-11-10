@@ -1,1 +1,0 @@
-cmd_drivers/video/console/built-in.o :=  /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/video/console/built-in.o drivers/video/console/dummycon.o ; scripts/mod/modpost drivers/video/console/built-in.o

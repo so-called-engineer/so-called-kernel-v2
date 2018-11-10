@@ -4,11 +4,11 @@
 //	compiled by GNU C version 4.8, GMP version 5.0.5, MPFR version 3.1.1, MPC version 1.0.1
 // GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 // options passed:  -nostdinc
-// -I /home/so-called-engineer/kernel/arch/arm64/include
+// -I /home/so-called-engineer/Kernel/arch/arm64/include
 // -I arch/arm64/include/generated -I include
-// -I /home/so-called-engineer/kernel/arch/arm64/include/uapi
+// -I /home/so-called-engineer/Kernel/arch/arm64/include/uapi
 // -I arch/arm64/include/generated/uapi
-// -I /home/so-called-engineer/kernel/include/uapi
+// -I /home/so-called-engineer/Kernel/include/uapi
 // -I include/generated/uapi -I arch/arm64/mach-exynos/include
 // -I arch/arm64/plat-samsung/include
 // -I drivers/gud/gud-exynos7420/MobiCoreKernelApi/include/
@@ -17,7 +17,7 @@
 // -D KBUILD_STR(s)=#s -D KBUILD_BASENAME=KBUILD_STR(asm_offsets)
 // -D KBUILD_MODNAME=KBUILD_STR(asm_offsets)
 // -isystem /home/so-called-engineer/aarch64-linux-android-4.9/bin/../lib/gcc/aarch64-linux-android/4.9.x/include
-// -include /home/so-called-engineer/kernel/include/linux/kconfig.h
+// -include /home/so-called-engineer/Kernel/include/linux/kconfig.h
 // -MD arch/arm64/kernel/.asm-offsets.s.d arch/arm64/kernel/asm-offsets.c
 // -mbionic -mlittle-endian -mgeneral-regs-only -mabi=lp64
 // -auxbase-strip arch/arm64/kernel/asm-offsets.s -g -Os -Wall -Wundef
@@ -496,16 +496,16 @@ main:
 .Letext0:
 	.file 2 "include/uapi/asm-generic/int-ll64.h"
 	.file 3 "include/asm-generic/int-ll64.h"
-	.file 4 "/home/so-called-engineer/kernel/include/uapi/asm-generic/posix_types.h"
+	.file 4 "/home/so-called-engineer/Kernel/include/uapi/asm-generic/posix_types.h"
 	.file 5 "include/linux/types.h"
 	.file 6 "include/linux/capability.h"
 	.file 7 "include/uapi/linux/time.h"
 	.file 8 "include/linux/sched.h"
-	.file 9 "/home/so-called-engineer/kernel/arch/arm64/include/uapi/asm/ptrace.h"
-	.file 10 "/home/so-called-engineer/kernel/arch/arm64/include/asm/spinlock_types.h"
+	.file 9 "/home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/ptrace.h"
+	.file 10 "/home/so-called-engineer/Kernel/arch/arm64/include/asm/spinlock_types.h"
 	.file 11 "include/linux/spinlock_types.h"
-	.file 12 "/home/so-called-engineer/kernel/arch/arm64/include/asm/fpsimd.h"
-	.file 13 "/home/so-called-engineer/kernel/arch/arm64/include/asm/processor.h"
+	.file 12 "/home/so-called-engineer/Kernel/arch/arm64/include/asm/fpsimd.h"
+	.file 13 "/home/so-called-engineer/Kernel/arch/arm64/include/asm/processor.h"
 	.file 14 "include/asm-generic/atomic-long.h"
 	.file 15 "include/linux/rbtree.h"
 	.file 16 "include/linux/cpumask.h"
@@ -516,14 +516,14 @@ main:
 	.file 21 "include/linux/mm_types.h"
 	.file 22 "include/linux/lockdep.h"
 	.file 23 "include/linux/uprobes.h"
-	.file 24 "/home/so-called-engineer/kernel/arch/arm64/include/asm/pgtable-3level-types.h"
-	.file 25 "/home/so-called-engineer/kernel/arch/arm64/include/asm/mmu.h"
+	.file 24 "/home/so-called-engineer/Kernel/arch/arm64/include/asm/pgtable-3level-types.h"
+	.file 25 "/home/so-called-engineer/Kernel/arch/arm64/include/asm/mmu.h"
 	.file 26 "include/linux/mm.h"
 	.file 27 "include/asm-generic/cputime_jiffies.h"
 	.file 28 "include/linux/uidgid.h"
 	.file 29 "include/linux/sem.h"
 	.file 30 "include/uapi/asm-generic/signal.h"
-	.file 31 "/home/so-called-engineer/kernel/include/uapi/asm-generic/signal-defs.h"
+	.file 31 "/home/so-called-engineer/Kernel/include/uapi/asm-generic/signal-defs.h"
 	.file 32 "include/uapi/asm-generic/siginfo.h"
 	.file 33 "include/linux/signal.h"
 	.file 34 "include/linux/pid.h"
@@ -552,18 +552,18 @@ main:
 	.file 57 "include/linux/pm.h"
 	.file 58 "include/linux/device.h"
 	.file 59 "include/linux/pm_wakeup.h"
-	.file 60 "/home/so-called-engineer/kernel/arch/arm64/include/asm/device.h"
+	.file 60 "/home/so-called-engineer/Kernel/arch/arm64/include/asm/device.h"
 	.file 61 "include/linux/dma-mapping.h"
 	.file 62 "include/linux/dma-attrs.h"
 	.file 63 "include/linux/dma-direction.h"
 	.file 64 "include/asm-generic/scatterlist.h"
 	.file 65 "include/linux/scatterlist.h"
-	.file 66 "/home/so-called-engineer/kernel/arch/arm64/include/asm/smp_plat.h"
+	.file 66 "/home/so-called-engineer/Kernel/arch/arm64/include/asm/smp_plat.h"
 	.file 67 "include/linux/printk.h"
 	.file 68 "include/linux/kernel.h"
 	.file 69 "include/linux/time.h"
 	.file 70 "include/linux/jiffies.h"
-	.file 71 "/home/so-called-engineer/kernel/arch/arm64/include/asm/memory.h"
+	.file 71 "/home/so-called-engineer/Kernel/arch/arm64/include/asm/memory.h"
 	.file 72 "include/linux/highuid.h"
 	.file 73 "include/linux/seq_file.h"
 	.file 74 "include/asm-generic/percpu.h"
@@ -571,7 +571,7 @@ main:
 	.file 76 "include/linux/debug_locks.h"
 	.file 77 "include/linux/rkp_entry.h"
 	.file 78 "include/asm-generic/pgtable.h"
-	.file 79 "/home/so-called-engineer/kernel/arch/arm64/include/asm/dma-mapping.h"
+	.file 79 "/home/so-called-engineer/Kernel/arch/arm64/include/asm/dma-mapping.h"
 	.section	.debug_info,"",%progbits
 .Ldebug_info0:
 	.4byte	0x4af0
@@ -11246,8 +11246,6 @@ main:
 	.string	"mpidr_hash"
 .LASF780:
 	.string	"restore_early"
-.LASF992:
-	.string	"/home/so-called-engineer/kernel"
 .LASF401:
 	.string	"sigpending"
 .LASF928:
@@ -11433,6 +11431,8 @@ main:
 	.string	"stimescaled"
 .LASF264:
 	.string	"start_code"
+.LASF992:
+	.string	"/home/so-called-engineer/Kernel"
 .LASF970:
 	.string	"overflowuid"
 .LASF499:

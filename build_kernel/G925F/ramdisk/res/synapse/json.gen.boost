@@ -3,7 +3,6 @@
 cat << CTAG
 {
     name:Touchboost,
-    name:BOOST,
     elements:[
 	{ SPane:{
 		title:"Input-Booster",

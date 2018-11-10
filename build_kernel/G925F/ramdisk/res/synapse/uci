@@ -5,7 +5,6 @@ if [ ! -f /su/xbin/busybox ]; then
 else
 	BB=/su/xbin/busybox;
 fi;
-BB=/system/xbin/busybox;
 
 CONFIG_JSON=/res/synapse/config.json
 ACTION_SCRIPTS=/res/synapse/actions/

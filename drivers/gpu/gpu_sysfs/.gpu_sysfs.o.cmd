@@ -1,1 +1,0 @@
-cmd_drivers/gpu/gpu_sysfs/gpu_sysfs.o := /home/so-called-engineer/aarch64-linux-android-4.9/bin/aarch64-linux-android-ld -EL    -r -o drivers/gpu/gpu_sysfs/gpu_sysfs.o drivers/gpu/gpu_sysfs/gpu_sysfs_main.o drivers/gpu/gpu_sysfs/gpu_sysfs_util.o drivers/gpu/gpu_sysfs/gpu_sysfs_target_exynos7420.o ; scripts/mod/modpost drivers/gpu/gpu_sysfs/gpu_sysfs.o

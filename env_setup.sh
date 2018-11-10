@@ -72,7 +72,7 @@ fi;
 
 # G925F
 if [ "$TARGET" = "G925F" ] ; then
-	export KERNEL_CONFIG="custom_defconfig";
+	export KERNEL_CONFIG="exynos7420-zerolte_defconfig";
 fi;
 
 # build script
