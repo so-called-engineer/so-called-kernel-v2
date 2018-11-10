@@ -591,6 +591,7 @@ deps_fs/proc/cmdline.o := \
   /home/so-called-engineer/Kernel/include/uapi/asm-generic/fcntl.h \
   include/linux/proc_fs.h \
   include/linux/seq_file.h \
+  /home/so-called-engineer/Kernel/arch/arm64/include/uapi/asm/setup.h \
 
 fs/proc/cmdline.o: $(deps_fs/proc/cmdline.o)
 

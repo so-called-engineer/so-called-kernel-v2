@@ -438,6 +438,9 @@ deps_drivers/cpufreq/exynos7420-apollo-cpufreq.o := \
     $(wildcard include/config/common/clk/debug.h) \
   include/linux/clk-provider.h \
     $(wildcard include/config/soc/exynos5422.h) \
+  include/linux/clocker.h \
+    $(wildcard include/config/exynos7420/cpu/underclock.h) \
+    $(wildcard include/config/exynos7420/cpu/overclock.h) \
   arch/arm64/mach-exynos/include/mach/map.h \
     $(wildcard include/config/soc/exynos5433.h) \
   arch/arm64/plat-samsung/include/plat/map-base.h \
