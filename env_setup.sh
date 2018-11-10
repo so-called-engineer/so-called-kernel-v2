@@ -67,12 +67,12 @@ export SUB_ARCH=arm64;
 
 # G920F
 if [ "$TARGET" = "G920F" ] ; then
-	export KERNEL_CONFIG="exynos7420-zerolte_defconfig";
+	export KERNEL_CONFIG="custom_defconfig";
 fi;
 
 # G925F
 if [ "$TARGET" = "G925F" ] ; then
-	export KERNEL_CONFIG="exynos7420-zerolte_defconfig";
+	export KERNEL_CONFIG="custom_defconfig";
 fi;
 
 # build script
